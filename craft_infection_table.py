@@ -3,7 +3,7 @@ import re
 
 
 def get_infection_article():
-    """ """
+    """Select articles related ton infection complication and save them in a parquet file"""
 
     # load data
     df = pd.read_parquet("data/pubmed_filtered.parquet")
@@ -42,7 +42,16 @@ def get_infection_article():
 
 
 def assign_article_type():
-    """ """
+    """Load articles from infection file and assign a single type for each oh them among
+    the following:
+
+        - prospective
+        - retrospective
+        - meta analysis
+        - rct
+        - review
+        - undefined
+    """
 
     # load data
     df = pd.read_parquet("data/infection_article.parquet")
@@ -95,7 +104,7 @@ def assign_article_type():
 
 
 def assign_factors():
-    """ """
+    """Load pmid from infection file and assign factors to each of them"""
 
     # load data
     df = pd.read_parquet("data/infection_article.parquet")
@@ -693,9 +702,108 @@ def check():
     print(f"[TABLE]{cmpt} / {len(set(check_list))}")
 
 
+def craft_table():
+    """Craft infection table, generate 2 files:
+
+    - infection_table.csv
+    - infection_table.html
+
+    """
+
+    # get status
+    pmid_to_status = assign_article_type()
+
+    # get factors
+    pmid_to_factors = assign_factors()
+
+    # extract list of factors
+    factor_list = []
+    for fl in pmid_to_factors.values():
+        for f in fl:
+            if f not in factor_list:
+                factor_list.append(f)
+
+    # extract list of status
+    status_list = []
+    for s in pmid_to_status.values():
+        if s not in status_list:
+            status_list.append(s)
+
+    # write table
+    matrix = []
+    for factor in factor_list:
+
+        vector = {"Factor": factor}
+        pmid_associated_to_factor = []
+        for pmid in pmid_to_factors:
+            if factor in pmid_to_factors[pmid]:
+                pmid_associated_to_factor.append(pmid)
+
+        # fill status
+        for status in status_list:
+            status_line = ""
+            for pmid in pmid_associated_to_factor:
+                if pmid_to_status[pmid] == status:
+                    status_line += f"{pmid} - "
+            status_line = status_line[:-2]
+            vector[status] = status_line
+
+        matrix.append(vector)
+
+    df = pd.DataFrame.from_dict(matrix)
+    df.to_csv("tables/infection_table.csv", index=False)
+    df.index = df["Factor"]
+    df = df.drop(columns=["Factor"])
+    df.to_html("tables/infection_table.tmp")
+
+    # engance table
+    style = """
+    <style>
+    #machin {
+      font-family: Arial, Helvetica, sans-serif;
+      width: 100%;
+    }
+
+    #machin td, #customers th {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+
+    #machin tr:nth-child(even){background-color: #f2f2f2;}
+
+    #machin tr:hover {background-color: #ddd;}
+
+    #machin th {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      text-align: center;
+      border: 10px solid #ddd;
+      background-color: #04AA6D;
+      color: white;
+    }
+    </style>
+    """
+
+    table_data = open("tables/infection_table.html", "w")
+    table_data.write(style)
+    tmp_table = open("tables/infection_table.tmp", "r")
+    for line in tmp_table:
+        if re.search("^<table ", line):
+            line = "<table id='machin'>\n"
+        elif re.search("[0-9]{8}", line):
+            for elt in re.findall("([0-9]{8})", line):
+                line = line.replace(
+                    elt, f"<a href='https://pubmed.ncbi.nlm.nih.gov/{elt}/'>{elt}</a>"
+                )
+        table_data.write(line)
+    table_data.close()
+
+
 if __name__ == "__main__":
 
     # get_infection_article()
     # check()
 
-    assign_factors()
+    # assign_factors()
+
+    craft_table()
