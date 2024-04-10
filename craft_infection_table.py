@@ -73,13 +73,13 @@ def assign_article_type():
         if pmid not in pmid_to_status:
             for elt in ot:
                 if re.search("prospective", elt.lower()):
-                    pmid_to_status[pmid] = "prosepective"
+                    pmid_to_status[pmid] = "prospective"
                 elif re.search("retrospective", elt.lower()):
                     pmid_to_status[pmid] = "retrospective"
 
         if pmid not in pmid_to_status:
             if re.search("prospective", title.lower()):
-                pmid_to_status[pmid] = "prosepective"
+                pmid_to_status[pmid] = "prospective"
             elif re.search("retrospective", title.lower()):
                 pmid_to_status[pmid] = "retrospective"
 

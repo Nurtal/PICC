@@ -64,13 +64,13 @@ def assign_article_type():
         if pmid not in pmid_to_status:
             for elt in ot:
                 if re.search("prospective", elt.lower()):
-                    pmid_to_status[pmid] = "prosepective"
+                    pmid_to_status[pmid] = "prospective"
                 elif re.search("retrospective", elt.lower()):
                     pmid_to_status[pmid] = "retrospective"
 
         if pmid not in pmid_to_status:
             if re.search("prospective", title.lower()):
-                pmid_to_status[pmid] = "prosepective"
+                pmid_to_status[pmid] = "prospective"
             elif re.search("retrospective", title.lower()):
                 pmid_to_status[pmid] = "retrospective"
 
@@ -308,9 +308,9 @@ def assign_factors():
             target_list, tag, mh, ot, title, abstract, pmid, pmid_to_factor_list
         )
 
-        # catch male
-        target_list = ["male"]
-        tag = "Sex Male"
+        # catch gender
+        target_list = ["sex", "gender", "male", "female"]
+        tag = "Gender"
         pmid_to_factor_list = hunt_factors(
             target_list, tag, mh, ot, title, abstract, pmid, pmid_to_factor_list
         )
