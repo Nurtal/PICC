@@ -15,7 +15,7 @@ def scan_risk(target:str, text:str)->bool:
 
     # parameters
     target_can_be_a_risk = False
-    risk_marker_list = ['risk', 'factor', 'impact', 'associate', 'drive', 'correlation', 'correlate', 'more', 'high', 'low', 'less']
+    risk_marker_list = ['risk', 'factor', 'impact', 'associate', 'drive', 'correlation', 'correlate', 'more', 'high', 'low', 'less', 'increase', 'decrease']
     risk_pattern = '|'.join(re.escape(term) for term in risk_marker_list)
 
     # step 1 - preprocess target and text
@@ -36,7 +36,6 @@ def scan_risk(target:str, text:str)->bool:
     # return scan result
     return target_can_be_a_risk
             
- 
 
 if __name__ == "__main__":
 
