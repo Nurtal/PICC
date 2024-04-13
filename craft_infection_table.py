@@ -1,5 +1,6 @@
 import pandas as pd
 import re
+import hunt_risk
 
 
 def get_infection_article():
@@ -713,7 +714,7 @@ def craft_table():
 
     # parameters
     factor_to_target = {
-        "Advanced age":[' age ', 'old', 'older', 'young', 'elderly'],
+        "Advanced Age":[' age ', 'old', 'older', 'young', 'elderly'],
         "Chemotherapy":['chemotherapy',"fluoropyrimidine","etoposide","carboplatin","docetaxel"],
         "Two or more lumens":["dual-lumen","lumens","multiple-lumen","multilumen","triple lumen","triple-lumen","quadruple lumen","quadruple-lumen"],
         "Antibiotic-coated catheters":["impregnated","coated"],
@@ -721,7 +722,7 @@ def craft_table():
         "Antibiotic therapy":["anti-bacterial","antifungal","anti-infective","antimicrobial","antibiotic"],
         "Parenteral nutrition":["parenteral nutrition"],
         "Materials of PICC":["polyurethanes", "silicones"],
-        "PICC dwell time ":["catheter day","duration of picc","duration of peripherally","prolonged maintenance","catheter retention time","indwelling time"],
+        "PICC dwell time":["catheter day","duration of picc","duration of peripherally","prolonged maintenance","catheter retention time","indwelling time"],
         "Medical department admission (including ICU)":["intensive care unit","medical department admission","admission to","ICU"],
         "Acute myeloid leukemia":["leukemia"],
         "Auto/allograft":["autograft", "allograft"],
@@ -743,6 +744,12 @@ def craft_table():
     # get factors
     pmid_to_factors = assign_factors()
 
+    # get text
+    pmid_to_text = hunt_risk.get_pmid_to_text("data/infection_article.parquet")
+
+    # clean factors
+    pmid_to_factors = hunt_risk.assgin_risk_factor(pmid_to_factors, pmid_to_text, factor_to_target)
+    
     # extract list of factors
     factor_list = []
     for fl in pmid_to_factors.values():

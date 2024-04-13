@@ -1,11 +1,14 @@
 import re
+import pandas as pd
+import os
 
-def scan_risk(target:str, text:str)->bool:
+def scan_risk(target:str, text:str, log_file:str)->bool:
     """Scan risk for a target within a text.
 
     Args:
         target (str) : the potential risk
         test (str) : the context to scan
+        log_file (str) : path to log file, should already exist
     
     Return:
         (bool) : True if target is a potential risk
@@ -18,6 +21,9 @@ def scan_risk(target:str, text:str)->bool:
     risk_marker_list = ['risk', 'factor', 'impact', 'associate', 'drive', 'correlation', 'correlate', 'more', 'high', 'low', 'less', 'increase', 'decrease']
     risk_pattern = '|'.join(re.escape(term) for term in risk_marker_list)
 
+    # step 0 - open log file
+    log_data = open(log_file, 'a')
+
     # step 1 - preprocess target and text
     target = target.lower()
     text = text.lower()
@@ -26,14 +32,18 @@ def scan_risk(target:str, text:str)->bool:
 
         # step 2 - check if target is present
         if(re.search(target, sentence)):
+            log_data.write(f"[TARGET] => found {target} in {sentence}\n")
 
             # step 3 - Look for risk marker in the sentence
-            if(re.search(risk_pattern, sentence)):
+            for risk in risk_marker_list:
+                if(re.search(risk, sentence)):
+                    log_data.write(f"[RISK] => found {risk} in {sentence}\n")
 
-                # assign potential risk
-                target_can_be_a_risk = True
+                    # assign potential risk
+                    target_can_be_a_risk = True
 
     # return scan result
+    log_data.close()
     return target_can_be_a_risk
 
 def assgin_risk_factor(pmid_to_factors:dict, pmid_to_text:dict, factor_to_target:dict) -> dict:
@@ -41,20 +51,25 @@ def assgin_risk_factor(pmid_to_factors:dict, pmid_to_text:dict, factor_to_target
     
     # init data
     pmid_to_risk_factor = {}
+    log_file = 'log/scan.log'
+    log_data = open(log_file, 'w')
 
     # scan
     for pmid in pmid_to_factors:
+        log_data.write(f"# {pmid} ---------")
         factor_to_keep = []
         text = pmid_to_text[pmid]
         for factor in pmid_to_factors[pmid]:
+            log_data.write(f"## -> Scan Factor {factor}")
             target_list = factor_to_target[factor]
             for target in target_list:
                 if(factor not in factor_to_keep):
-                    if(scan_risk(target, text)):
+                    if(scan_risk(target, text, log_file)):
                         factor_to_keep.append(factor)
     pmid_to_risk_factor[pmid] = factor_to_keep
     
     # return data
+    log_data.close()
     return pmid_to_risk_factor 
 
 

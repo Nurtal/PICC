@@ -1,5 +1,6 @@
 import pandas as pd
 import re
+import hunt_risk
 
 
 def get_thrombose_article():
@@ -254,7 +255,7 @@ def assign_factors():
 
         # deal with power-injectable
         target_list = ["power-injectable", "power injectable"]
-        tag = "Power-injectable piccs"
+        tag = "Power injectable PICC"
         pmid_to_factor_list = hunt_factors(
             target_list, tag, mh, ot, title, abstract, pmid, pmid_to_factor_list
         )
@@ -281,7 +282,7 @@ def assign_factors():
             "carboplatin",
             "docetaxel",
         ]
-        tag = "Chemotherapy / History of chemotherapy"
+        tag = "Chemotherapy"
         pmid_to_factor_list = hunt_factors(
             target_list, tag, mh, ot, title, abstract, pmid, pmid_to_factor_list
         )
@@ -324,7 +325,7 @@ def assign_factors():
 
         # catch smoking
         target_list = ["smoking", "smoker"]
-        tag = "Smoking / History of smoking"
+        tag = "Smoking"
         pmid_to_factor_list = hunt_factors(
             target_list, tag, mh, ot, title, abstract, pmid, pmid_to_factor_list
         )
@@ -379,19 +380,19 @@ def craft_table():
     factor_to_target = {
 
 
-        "Number of lumens":["dual-lumen","lumens","multiple-lumen","multilumen","triple lumen","triple-lumen","quadruple lumen","quadruple-lumen"],
+        "Two or more lumens":["dual-lumen","lumens","multiple-lumen","multilumen","triple lumen","triple-lumen","quadruple lumen","quadruple-lumen"],
         "Power injectable PICC":["power-injectable", "power injectable"],
         "Immunosuppression":["immunosuppression", " aids", "immune function"],
-        "Intensive care unit":["intensive care unit","medical department admission","admission to","ICU"],
+        "ICU":["intensive care unit","medical department admission","admission to","ICU"],
         "Chemotherapy":["chemotherapy","fluoropyrimidine","etoposide","carboplatin","docetaxel"],
-        "Diabetes":["diabetes", "diabetic"],
+        "Diabete":["diabetes", "diabetic"],
         "Cancer":["cancer","carcinoma","metastasis","hematologic malignancy","leukemia","lymphoma","neoplasia"],
         "Gender":["sex", "gender", "male", "female"],
-        "BMI_height_obesity":["obesity", "body mass index", "bmi"],
-        "Smoking_History of smoking":["smoking", "smoker"],
+        "BMI":["obesity", "body mass index", "bmi"],
+        "Smoking":["smoking", "smoker"],
         "Age":[' age ', 'old', 'older', 'young', 'elderly'],
-        "Thrombosis_History of thrombosis_past history of VTE":["history of deep venous thrombo","history of thrombo","past thrombo"],
-        "Large catheter_large gauge catheter_catheter to vein ratio":["Large catheter"],
+        "History Of Thrombosis":["history of deep venous thrombo","history of thrombo","past thrombo"],
+        "Large catheter":["Large catheter"],
         "PICC insertion procedure_position_more than one attempt for PICC insertion_operator experience_cutting or trimming the tip before insertion_Blood vessel traumatism_vein depth": [
             "insertion procedure",
             "position",
@@ -461,6 +462,12 @@ def craft_table():
 
     # get factors
     pmid_to_factors = assign_factors()
+    
+    # get text
+    pmid_to_text = hunt_risk.get_pmid_to_text("data/thrombose_article.parquet")
+
+    # clean factors
+    pmid_to_factors = hunt_risk.assgin_risk_factor(pmid_to_factors, pmid_to_text, factor_to_target)
 
     # extract list of factors
     factor_list = []
