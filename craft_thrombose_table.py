@@ -375,6 +375,86 @@ def craft_table():
     - thrombose_table.html
 
     """
+    
+    factor_to_target = {
+
+
+        "Number of lumens":["dual-lumen","lumens","multiple-lumen","multilumen","triple lumen","triple-lumen","quadruple lumen","quadruple-lumen"],
+        "Power injectable PICC":["power-injectable", "power injectable"],
+        "Immunosuppression":["immunosuppression", " aids", "immune function"],
+        "Intensive care unit":["intensive care unit","medical department admission","admission to","ICU"],
+        "Chemotherapy":["chemotherapy","fluoropyrimidine","etoposide","carboplatin","docetaxel"],
+        "Diabetes":["diabetes", "diabetic"],
+        "Cancer":["cancer","carcinoma","metastasis","hematologic malignancy","leukemia","lymphoma","neoplasia"],
+        "Gender":["sex", "gender", "male", "female"],
+        "BMI_height_obesity":["obesity", "body mass index", "bmi"],
+        "Smoking_History of smoking":["smoking", "smoker"],
+        "Age":[' age ', 'old', 'older', 'young', 'elderly'],
+        "Thrombosis_History of thrombosis_past history of VTE":["history of deep venous thrombo","history of thrombo","past thrombo"],
+        "Large catheter_large gauge catheter_catheter to vein ratio":["Large catheter"],
+        "PICC insertion procedure_position_more than one attempt for PICC insertion_operator experience_cutting or trimming the tip before insertion_Blood vessel traumatism_vein depth": [
+            "insertion procedure",
+            "position",
+            "picc insertion",
+            "operator experience",
+            "vein depth",
+        ],
+        "PICC indwelling time_catheter retention time": [
+            "catheter day",
+            "duration of picc",
+            "duration of peripherally",
+            "prolonged maintenance",
+            "catheter retention time",
+            "indwelling time",
+        ],
+        "Number of comorbidities/HTA/Hyperglycemia": [
+            "hta",
+            "hyperglycemia",
+            "comorbiditie",
+        ],
+        "Performans score_performance status_karnofsky_ECOG_Less activity_bedridden > 72h": [
+            "performance score",
+            "performance status",
+            "karnofsky",
+            "ecog",
+            "less activity",
+            "bedridden",
+        ],
+        "Total parenteral nutrition": ["parenteral nutrition"],
+        "Biology ( blood platelet level_white blood cell level_triglycerides_fibrinogen)": [
+            "platelet",
+            "blood cell",
+            "triglycerides",
+            "fibrinogen",
+        ],
+        "Upper extremity damages": ["upper extremity damages"],
+        "Surgery_type of surgery": ["surgery"],
+        "Transplantation": ["transplantation"],
+        "High intrathoracic pressure": ["intrathoracic press"],
+        "PICC infection": ["infection"],
+        "Score": [],
+        "Menopause_endocrine therapy_hormone use": [
+            "menopause",
+            "endocrine",
+            "hormone",
+        ],
+        "Erythropoiesis-stimulating agents": ["erythropoiesis"],
+        "Slower blood flow velocity": ["blood flow velocity"],
+        "Non-O blood type_ group B": ["blood type"],
+        "Anticoagulants therapy": ["anticoagulant", "anti-coagulant"],
+        "Thrombophilia": ["thrombophilia"],
+        "Others (COPD, IBD)": ["copd", "ibd"],
+        "Arm_laterality _vein choice": ["arm laterality", "vein choice"],
+        "Hypertension": ["hypertension"],
+        "Hospitalisation/ Medical department admission/ discharged to a skilled-nursing facility": [
+            "medical department admission",
+            "admission to",
+        ],
+        "Blood vessel irritating drug_vancomycin_amphotericine": [
+            "vancomycin",
+            "amphotericine",
+        ],
+    }
 
     # get status
     pmid_to_status = assign_article_type()

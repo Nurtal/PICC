@@ -35,7 +35,49 @@ def scan_risk(target:str, text:str)->bool:
 
     # return scan result
     return target_can_be_a_risk
-            
+
+def assgin_risk_factor(pmid_to_factors:dict, pmid_to_text:dict, factor_to_target:dict) -> dict:
+    """Generate the use of scan_risk function for multiple pmid and facors"""
+    
+    # init data
+    pmid_to_risk_factor = {}
+
+    # scan
+    for pmid in pmid_to_factors:
+        factor_to_keep = []
+        text = pmid_to_text[pmid]
+        for factor in pmid_to_factors[pmid]:
+            target_list = factor_to_target[factor]
+            for target in target_list:
+                if(factor not in factor_to_keep):
+                    if(scan_risk(target, text)):
+                        factor_to_keep.append(factor)
+    pmid_to_risk_factor[pmid] = factor_to_keep
+    
+    # return data
+    return pmid_to_risk_factor 
+
+
+
+
+
+def get_pmid_to_text(data_file:str) -> dict:
+    """Load pmid and its associate text (has the concatenation of title and abstract) into a dictionnary and return it """
+
+
+    # load data
+    df = pd.read_parquet(data_file)
+    pmid_to_text = {}
+    for index, row in df.iterrows():
+        pmid = row["PMID"]
+        title = row["TITLE"]
+        abstract = row["ABSTRACT"]
+        text = f"{title.lower()}. {abstract.lower()}".replace('.. ', '. ').replace('  ', ' ')
+        pmid_to_text[pmid] = text
+
+    # return data
+    return pmid_to_text        
+
 
 if __name__ == "__main__":
 
