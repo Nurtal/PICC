@@ -1,0 +1,42 @@
+COMPLICATION,FACTOR,PMID_LIST
+Thrombosis,Anticoagulants therapy,23633980
+,Prophylactic anticoagulation,31764785* - 18596317*
+,Antiplatelet agent,23633980 – 25726426
+,Erythropoiesis-stimulating agents,23633980
+,PICC infection,23633980
+,Chemotherapy,28936124 - 33893843* - 32205131 - 26207019 – 33249623
+,Chemotherapy history,23710585* - 28740162 
+,Smoking/history of smoking,33249623
+,History of thrombosis,'19753569 -29872323 - 29408616 - 25726426 - 20923799* 
+30632436 - 28796444 - 11941543 – 22113818'
+,Blood platelet levels,28740162
+,Age,32205131 - 24781722* -  11941543
+,Sex,21541826 (male-uni) - 32551112 (female-uni)
+,Blood group (non-o blood type/ blood group B),32880203 - 34103988 -29125332
+,High BMI,25673995* - 24983259* (univariate) - 24781722 (>25) – 30697126;29872323
+,Recent/active neoplasia,24612469 - 28796444 - 29408616 – 29125332
+,Advanced cancer,26349890 - 29872323 - 22444157 – 26207019
+,Lymphoma,27078849
+,Solid neoplasia type,33244268
+,Arm / laterality / characteristic,22266584 – 22113818
+,Hypertension,24983259;32205131
+,Diabetes,23710585* - 22444157 
+,Triglycerides level,34103988 – 33244268
+,Renal failure,22266584
+,Other comorbidities (COPD),22444157
+,Less activity,25673995 - 23710585
+,Blood vessel irritating drug ,11941543 -22266584 -22113818
+,Blood vessel traumatism,28936124 – 32880203
+,Operator (experience/type),29408616 - 25726426 
+,PICC insertion procedure,19753569 - 26349890 – 25376324
+,Large-gauge catheters/catheter to vein ratio,25593110 - 34226216 (uni) - 34103988 - 30632436 - 24612469 - 25726426- 10928518- 29125332 - 33249623 - 32551112 (univariate) - 20923799* - 33244268
+,Two or more lumens,30632436 - 28796444 - 27161689* - 29408616 - 32551112 (uni)
+,Slower blood flow velocity,32195936
+,PICC exchange,29408616
+,Higher fibrinogen levels,33893843
+,Vein choice,29408616  - 33889013 (uni) - 25726426  - 22266584 
+,Powerinjectable PICC/antimicrobial coated PICC,23838218 – 29408616
+,'Performance score (karnofsky, ECOG)',28740162- 29872323 – 32195936*
+,PICC in situ during surgery ,25726426 - 22113818 – 20923799*
+,Recent trauma,22266584
+,Hospitalisation/ Medical department admission/ discharged to a skilled-nursing facility,23633980 - 33298237* -  11941543 

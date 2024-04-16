@@ -711,32 +711,66 @@ def craft_table():
 
     """
 
-
     # parameters
     factor_to_target = {
-        "Advanced Age":[' age ', 'old', 'older', 'young', 'elderly'],
-        "Chemotherapy":['chemotherapy',"fluoropyrimidine","etoposide","carboplatin","docetaxel"],
-        "Two or more lumens":["dual-lumen","lumens","multiple-lumen","multilumen","triple lumen","triple-lumen","quadruple lumen","quadruple-lumen"],
-        "Antibiotic-coated catheters":["impregnated","coated"],
-        "Previous PICC":["previous picc placement", "previous peripherally inserted"],
-        "Antibiotic therapy":["anti-bacterial","antifungal","anti-infective","antimicrobial","antibiotic"],
-        "Parenteral nutrition":["parenteral nutrition"],
-        "Materials of PICC":["polyurethanes", "silicones"],
-        "PICC dwell time":["catheter day","duration of picc","duration of peripherally","prolonged maintenance","catheter retention time","indwelling time"],
-        "Medical department admission (including ICU)":["intensive care unit","medical department admission","admission to","ICU"],
-        "Acute myeloid leukemia":["leukemia"],
-        "Auto/allograft":["autograft", "allograft"],
-        "Anticoagulants therapy":["anticoagulant", "anti-coagulant"],
-        "Immunosuppression":["immunosuppression", " aids", "immune function"],
-        "Hospital length of stay":["hospital length of stay", "length of stay"],
-        "Seasonality (summer / warm)":["season", "summer", "warm"],
-        "Operator experience":["experience of operator", "experience of picc operator"],
-        "Postplacement":["tip position", "tip malposition"],
-        "Fixation device":["statlock", "fixation device"],
-        "Catheter care delay":["catheter care delay"],
-        "Power-injectable piccs":["power-injectable", "power injectable"]
+        "Advanced Age": [" age ", "old", "older", "young", "elderly"],
+        "Chemotherapy": [
+            "chemotherapy",
+            "fluoropyrimidine",
+            "etoposide",
+            "carboplatin",
+            "docetaxel",
+        ],
+        "Two or more lumens": [
+            "dual-lumen",
+            "lumens",
+            "multiple-lumen",
+            "multilumen",
+            "triple lumen",
+            "triple-lumen",
+            "quadruple lumen",
+            "quadruple-lumen",
+        ],
+        "Antibiotic-coated catheters": ["impregnated", "coated"],
+        "Previous PICC": ["previous picc placement", "previous peripherally inserted"],
+        "Antibiotic therapy": [
+            "anti-bacterial",
+            "antifungal",
+            "anti-infective",
+            "antimicrobial",
+            "antibiotic",
+        ],
+        "Parenteral nutrition": ["parenteral nutrition"],
+        "Materials of PICC": ["polyurethanes", "silicones"],
+        "PICC dwell time": [
+            "catheter day",
+            "duration of picc",
+            "duration of peripherally",
+            "prolonged maintenance",
+            "catheter retention time",
+            "indwelling time",
+        ],
+        "Medical department admission (including ICU)": [
+            "intensive care unit",
+            "medical department admission",
+            "admission to",
+            "ICU",
+        ],
+        "Acute myeloid leukemia": ["leukemia"],
+        "Auto/allograft": ["autograft", "allograft"],
+        "Anticoagulants therapy": ["anticoagulant", "anti-coagulant"],
+        "Immunosuppression": ["immunosuppression", " aids", "immune function"],
+        "Hospital length of stay": ["hospital length of stay", "length of stay"],
+        "Seasonality (summer / warm)": ["season", "summer", "warm"],
+        "Operator experience": [
+            "experience of operator",
+            "experience of picc operator",
+        ],
+        "Postplacement": ["tip position", "tip malposition"],
+        "Fixation device": ["statlock", "fixation device"],
+        "Catheter care delay": ["catheter care delay"],
+        "Power-injectable piccs": ["power-injectable", "power injectable"],
     }
-    
 
     # get status
     pmid_to_status = assign_article_type()
@@ -748,8 +782,10 @@ def craft_table():
     pmid_to_text = hunt_risk.get_pmid_to_text("data/infection_article.parquet")
 
     # clean factors
-    pmid_to_factors = hunt_risk.assgin_risk_factor(pmid_to_factors, pmid_to_text, factor_to_target)
-    
+    pmid_to_factors = hunt_risk.assgin_risk_factor(
+        pmid_to_factors, pmid_to_text, factor_to_target
+    )
+
     # extract list of factors
     factor_list = []
     for fl in pmid_to_factors.values():

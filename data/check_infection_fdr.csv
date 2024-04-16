@@ -1,0 +1,22 @@
+COMPLICATION,FACTOR,PMID_LIST
+infection,Advanced age,31937457;30845210
+infection,Chemotherapy,32028425;30845210;23295565;30180989;26202391
+infection,Two or more lumens,32028425;30845210;24440542;23295565;23838218
+infection,Antibiotic-coated catheters,30180989;23010088
+infection,Previous PICC,31937457;20857109
+infection,Antibiotic therapy,32028425
+infection,Parenteral nutrition,33298237
+infection,Materials of PICC,31900609
+infection,PICC dwell time ,32569313;29516966
+infection,Medical department admission (including ICU),31937457;24440542;23295565;21460466;33298237
+infection,Acute myeloid leukemia,34108612;30180989
+infection,Auto/allograft,26202391
+infection,Anticoagulants therapy,26202391
+infection,Immunosuppression,30180989;23838218;28540264
+infection,Hospital length of stay,30845210;24440542
+infection,Seasonality (summer / warm),28540264;26045668;25987475
+infection,Operator experience,29516966
+infection,Postplacement,26045668
+infection,Fixation device,26045668
+infection,Catheter care delay,26045668
+infection,Power-injectable piccs,23838218
