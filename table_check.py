@@ -6,7 +6,7 @@ def check_factors(pmid_to_factor, check_data_file, log_file):
 
     # parameter
     factor_to_pmid = {}
-    log_data = open(log_file, "w")
+    log_data = open(log_file, "w", encoding='utf-8')
 
     # load check table
     df = pd.read_csv(check_data_file)
@@ -40,6 +40,50 @@ def check_factors(pmid_to_factor, check_data_file, log_file):
 
     # close log
     log_data.close()
+
+
+def add_controled_factors(pmid_to_factor:dict, check_data_file:str, log_file:str):
+    """ """
+
+    # parameter
+    factor_to_pmid = {}
+    log_data = open(log_file, "w", encoding='utf-8')
+
+    # load check table
+    df = pd.read_csv(check_data_file)
+
+    # get factor to pmid
+    for index, row in df.iterrows():
+        table_factor = row["FACTOR"]
+        pmid_list = row["PMID_LIST"].split(";")
+        factor_to_pmid[table_factor] = pmid_list
+
+    # get authorized factors list
+    authorized_factor_list = []
+    for pmid in pmid_to_factor:
+        for f in pmid_to_factor[pmid]:
+            if(f not in authorized_factor_list):
+                authorized_factor_list.append(f)
+    
+    # look for missing pmid
+    for factor in factor_to_pmid:
+        if(factor in authorized_factor_list):
+        
+            for pmid in factor_to_pmid[factor]:
+                if pmid not in list(pmid_to_factor.keys()):
+                    pmid_to_factor[pmid] = [factor]
+                    log_data.write(f"[ADD] {pmid} associated to {factor}\n")
+                else:
+                    pmid_to_factor[pmid].append(factor)
+                    log_data.write(f"[ADD] {factor} in factor list of {pmid}\n")
+        else:
+            log_data.write(f"[WARNING] {factor} not found in original data\n")
+            
+    # close log
+    log_data.close()
+    
+    # return updated data
+    return pmid_to_factor
 
 
 if __name__ == "__main__":

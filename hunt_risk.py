@@ -38,7 +38,7 @@ def scan_risk(target: str, text: str, log_file: str) -> bool:
     risk_pattern = "|".join(re.escape(term) for term in risk_marker_list)
 
     # step 0 - open log file
-    log_data = open(log_file, "a")
+    log_data = open(log_file, "a", encoding="utf-8")
 
     # step 1 - preprocess target and text
     target = target.lower()
@@ -71,7 +71,7 @@ def assgin_risk_factor(
     # init data
     pmid_to_risk_factor = {}
     log_file = "log/scan.log"
-    log_data = open(log_file, "w")
+    log_data = open(log_file, "w", encoding="utf-8")
     log_data.close()
 
     f_list1 = []
@@ -92,7 +92,7 @@ def assgin_risk_factor(
         factor_to_keep = []
         text = pmid_to_text[pmid]
         for factor in pmid_to_factors[pmid]:
-            log_data = open(log_file, "a")
+            log_data = open(log_file, "a", encoding="utf-8")
             log_data.write(f"## -> Scan Factor {factor}\n")
             log_data.close()
             target_list = factor_to_target[factor]

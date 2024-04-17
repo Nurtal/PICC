@@ -121,7 +121,7 @@ def assign_factors():
     df = pd.read_parquet("data/thrombose_article.parquet")
 
     factor_list = [
-        "Number of lumens",
+        "Two or more lumens",
         "Power injectable PICC",
         "Immunosuppression",
         "Intensive care unit",
@@ -134,8 +134,8 @@ def assign_factors():
         "Age",
         "Thrombosis_History of thrombosis_past history of VTE",
         "Large catheter_large gauge catheter_catheter to vein ratio",
-        "PICC insertion procedure_position_more than one attempt for PICC insertion_operator experience_cutting or trimming the tip before insertion_Blood vessel traumatism_vein depth",
-        "PICC indwelling time_catheter retention time",
+        "PICC insertion procedure",
+        "PICC indwelling time",
         "Number of comorbidities/HTA/Hyperglycemia",
         "Performans score_performance status_karnofsky_ECOG_Less activity_bedridden > 72h",
         "Total parenteral nutrition",
@@ -160,14 +160,14 @@ def assign_factors():
     ]
 
     factor_to_target = {
-        "PICC insertion procedure_position_more than one attempt for PICC insertion_operator experience_cutting or trimming the tip before insertion_Blood vessel traumatism_vein depth": [
+        "PICC insertion procedure": [
             "insertion procedure",
             "position",
             "picc insertion",
             "operator experience",
             "vein depth",
         ],
-        "PICC indwelling time_catheter retention time": [
+        "PICC indwelling time": [
             "catheter day",
             "duration of picc",
             "duration of peripherally",
@@ -424,14 +424,14 @@ def craft_table():
             "past thrombo",
         ],
         "Large catheter": ["Large catheter"],
-        "PICC insertion procedure_position_more than one attempt for PICC insertion_operator experience_cutting or trimming the tip before insertion_Blood vessel traumatism_vein depth": [
+        "PICC insertion procedure": [
             "insertion procedure",
             "position",
             "picc insertion",
             "operator experience",
             "vein depth",
         ],
-        "PICC indwelling time_catheter retention time": [
+        "PICC indwelling time": [
             "catheter day",
             "duration of picc",
             "duration of peripherally",
@@ -504,7 +504,7 @@ def craft_table():
 
     # run check
     table_check.check_factors(
-        pmid_to_factors, "data/check_table3_fdr.csv", "log/check_thrombose.log"
+        pmid_to_factors, "data/check_thrombo_fdr.csv", "log/check_thrombose.log"
     )
 
     # extract list of factors
