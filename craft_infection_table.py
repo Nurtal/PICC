@@ -1,6 +1,7 @@
 import pandas as pd
 import re
 import hunt_risk
+import check
 
 
 def get_infection_article():

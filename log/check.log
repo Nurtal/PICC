@@ -1,0 +1,116 @@
+[OK] Found factor Number of lumens for pmid 24612469
+[ERROR] Factor couleur du chat not found in table
+[ERROR] Factor Number of lumens not found for pmid 123
+[MISSING] 23838218 is missing for factor Number of lumens
+[MISSING] 30909723 is missing for factor Number of lumens
+[MISSING] 29408616 is missing for factor Number of lumens
+[MISSING] 27818170 is missing for factor Number of lumens
+[MISSING] 23354238 is missing for factor Number of lumens
+[MISSING] 27161689 is missing for factor Number of lumens
+[MISSING] 30632436 is missing for factor Number of lumens
+[MISSING] 28796444 is missing for factor Number of lumens
+[MISSING] 27033138 is missing for factor Number of lumens
+[MISSING] 23838218 is missing for factor Power injectable PICC
+[MISSING] 23838218 is missing for factor Immunosuppression
+[MISSING] 30384035 is missing for factor Intensive care unit
+[MISSING] 22948189 is missing for factor Intensive care unit
+[MISSING] 23697825 is missing for factor Intensive care unit
+[MISSING] 28822403 is missing for factor Intensive care unit
+[MISSING] 24811591 is missing for factor Intensive care unit
+[MISSING] 24090605 is missing for factor Chemotherapy/ chemotherapy history
+[MISSING] 34488396 is missing for factor Chemotherapy/ chemotherapy history
+[MISSING] 27542955 is missing for factor Chemotherapy/ chemotherapy history
+[MISSING] 33249623 is missing for factor Chemotherapy/ chemotherapy history
+[MISSING] 26207019 is missing for factor Chemotherapy/ chemotherapy history
+[MISSING] 28740162 is missing for factor Chemotherapy/ chemotherapy history
+[MISSING] 28936124 is missing for factor Chemotherapy/ chemotherapy history
+[MISSING] 22444157 is missing for factor Chemotherapy/ chemotherapy history
+[MISSING] 33893843 is missing for factor Chemotherapy/ chemotherapy history
+[MISSING] 25680892 is missing for factor Chemotherapy/ chemotherapy history
+[MISSING] 23710585 is missing for factor Chemotherapy/ chemotherapy history
+[MISSING] 25673995 is missing for factor Chemotherapy/ chemotherapy history
+[MISSING] 34095299 is missing for factor Diabetes
+[MISSING] 23710585 is missing for factor Diabetes
+[MISSING] 25680892 is missing for factor Diabetes
+[MISSING] 22444157 is missing for factor Diabetes
+[MISSING] 27371372 is missing for factor Cancer/ Hematologic malignacy
+[MISSING] 35943390 is missing for factor Cancer/ Hematologic malignacy
+[MISSING] 30594171 is missing for factor Cancer/ Hematologic malignacy
+[MISSING] 25910751 is missing for factor Cancer/ Hematologic malignacy
+[MISSING] 23697825 is missing for factor Cancer/ Hematologic malignacy
+[MISSING] 35279504 is missing for factor Cancer/ Hematologic malignacy
+[MISSING] 34613657 is missing for factor Cancer/ Hematologic malignacy
+[MISSING] 25680892 is missing for factor Cancer/ Hematologic malignacy
+[MISSING] 27078849 is missing for factor Cancer/ Hematologic malignacy
+[MISSING] 28936124 is missing for factor Sex
+[MISSING] 28218366 is missing for factor BMI/ height
+[MISSING] 24983259 is missing for factor BMI/ height
+[MISSING] 35287828 is missing for factor BMI/ height
+[MISSING] 32572092 is missing for factor BMI/ height
+[MISSING] 25673995 is missing for factor BMI/ height
+[MISSING] 25680892 is missing for factor BMI/ height
+[MISSING] 24781722 is missing for factor BMI/ height
+[MISSING] 33249623 is missing for factor Smoking/History of smoking
+[MISSING] 34095299 is missing for factor Age
+[MISSING] 33388763 is missing for factor Age
+[MISSING] 32205131 is missing for factor Age
+[MISSING] 25680892 is missing for factor Age
+[MISSING] 26217634 is missing for factor Age
+[MISSING] 24781722  is missing for factor Age
+[MISSING] 33388763 is missing for factor Thrombosis/ History of thrombosis
+[MISSING] 34373674 is missing for factor Thrombosis/ History of thrombosis
+[MISSING] 30632436 is missing for factor Thrombosis/ History of thrombosis
+[MISSING] 25680892 is missing for factor Thrombosis/ History of thrombosis
+[MISSING] 28796444 is missing for factor Thrombosis/ History of thrombosis
+[MISSING] 25726426 is missing for factor Thrombosis/ History of thrombosis
+[MISSING] 34226216 is missing for factor Large catheter/catheter to vein ratio
+[MISSING] 25295962 is missing for factor Large catheter/catheter to vein ratio
+[MISSING] 30632436 is missing for factor Large catheter/catheter to vein ratio
+[MISSING] 23354238 is missing for factor PICC insertion procedure/ position
+[MISSING] 34454607 is missing for factor PICC insertion procedure/ position
+[MISSING] 26349890 is missing for factor PICC insertion procedure/ position
+[MISSING] 32880203 is missing for factor PICC insertion procedure/ position
+[MISSING] 32572092 is missing for factor PICC insertion procedure/ position
+[MISSING] 29408616 is missing for factor PICC insertion procedure/ position
+[MISSING] 32375605 is missing for factor PICC insertion procedure/ position
+[MISSING] 33617142 is missing for factor PICC insertion procedure/ position
+[MISSING] 26217634 is missing for factor PICC insertion procedure/ position
+[MISSING] 27957644 is missing for factor PICC insertion procedure/ position
+[MISSING] 29615373 is missing for factor PICC indwelling time
+[MISSING] 24983259 is missing for factor Number of comorbidities/HTA/Hyperglycemia
+[MISSING] 25664112 is missing for factor Number of comorbidities/HTA/Hyperglycemia
+[MISSING] 29659465 is missing for factor Number of comorbidities/HTA/Hyperglycemia
+[MISSING] 24246096 is missing for factor Performans score/ Less activity/ bedridden > 72h
+[MISSING] 25664112 is missing for factor Performans score/ Less activity/ bedridden > 72h
+[MISSING] 32572092 is missing for factor Performans score/ Less activity/ bedridden > 72h
+[MISSING] 28740162 is missing for factor Performans score/ Less activity/ bedridden > 72h
+[MISSING] 23710585 is missing for factor Performans score/ Less activity/ bedridden > 72h
+[MISSING] 25673995 is missing for factor Performans score/ Less activity/ bedridden > 72h
+[MISSING] 25997503 is missing for factor Total parenteral nutrition
+[MISSING] 28740162 is missing for factor Biology
+[MISSING] 28936124 is missing for factor Biology
+[MISSING] 24781722 is missing for factor Biology
+[MISSING] 33893843 is missing for factor Biology
+[MISSING] 34432170 is missing for factor Upper extremity damages
+[MISSING] 34981151 is missing for factor Upper extremity damages
+[MISSING] 34095299 is missing for factor Surgery/ type of surgery
+[MISSING] 33388763 is missing for factor Surgery/ type of surgery
+[MISSING] 34373674 is missing for factor Surgery/ type of surgery
+[MISSING] 25726426 is missing for factor Surgery/ type of surgery
+[MISSING] 25997503 is missing for factor Transplantation
+[MISSING] 27500259 is missing for factor Transplantation
+[MISSING] 24246096 is missing for factor High intrathoracic pressure
+[MISSING] 23633980 is missing for factor PICC infection
+[MISSING] 33383236 is missing for factor Score
+[MISSING] 33594508 is missing for factor Score
+[MISSING] 35701467 is missing for factor Score
+[MISSING] 35701467 is missing for factor Score
+[MISSING] 34432170 is missing for factor Menopause/ endocrine therapy
+[MISSING] 23633980 is missing for factor Erythropoiesis-stimulating agents
+[MISSING] 32195936 is missing for factor Slower blood flow velocity
+[MISSING] 33617142 is missing for factor Slower blood flow velocity
+[MISSING] 32880203 is missing for factor Non-O blood type
+[MISSING] 23633980 is missing for factor Anticoagulations therapy
+[MISSING] 25680892 is missing for factor Thrombophilia
+[MISSING] 33388763 is missing for factor Others
+[MISSING] 34981151 is missing for factor Others
