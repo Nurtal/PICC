@@ -6,7 +6,7 @@ def check_factors(pmid_to_factor, check_data_file, log_file):
 
     # parameter
     factor_to_pmid = {}
-    log_data = open(log_file, "w", encoding='utf-8')
+    log_data = open(log_file, "w", encoding="utf-8")
 
     # load check table
     df = pd.read_csv(check_data_file)
@@ -42,12 +42,12 @@ def check_factors(pmid_to_factor, check_data_file, log_file):
     log_data.close()
 
 
-def add_controled_factors(pmid_to_factor:dict, check_data_file:str, log_file:str):
+def add_controled_factors(pmid_to_factor: dict, check_data_file: str, log_file: str):
     """ """
 
     # parameter
     factor_to_pmid = {}
-    log_data = open(log_file, "w", encoding='utf-8')
+    log_data = open(log_file, "w", encoding="utf-8")
 
     # load check table
     df = pd.read_csv(check_data_file)
@@ -62,13 +62,13 @@ def add_controled_factors(pmid_to_factor:dict, check_data_file:str, log_file:str
     authorized_factor_list = []
     for pmid in pmid_to_factor:
         for f in pmid_to_factor[pmid]:
-            if(f not in authorized_factor_list):
+            if f not in authorized_factor_list:
                 authorized_factor_list.append(f)
-    
+
     # look for missing pmid
     for factor in factor_to_pmid:
-        if(factor in authorized_factor_list):
-        
+        if factor in authorized_factor_list:
+
             for pmid in factor_to_pmid[factor]:
                 if pmid not in list(pmid_to_factor.keys()):
                     pmid_to_factor[pmid] = [factor]
@@ -78,11 +78,26 @@ def add_controled_factors(pmid_to_factor:dict, check_data_file:str, log_file:str
                     log_data.write(f"[ADD] {factor} in factor list of {pmid}\n")
         else:
             log_data.write(f"[WARNING] {factor} not found in original data\n")
-            
+
     # close log
     log_data.close()
-    
+
     # return updated data
+    return pmid_to_factor
+
+
+def get_pmid_to_factor(risk_factor_file):
+    """ """
+    df = pd.read_csv(risk_factor_file)
+    pmid_to_factor = {}
+    for index, row in df.iterrows():
+        pmid_list = row["PMID_LIST"].split(";")
+        factor = row["FACTOR"]
+        for pmid in pmid_list:
+            if pmid not in pmid_to_factor:
+                pmid_to_factor[pmid] = [factor]
+            else:
+                pmid_to_factor[pmid].append(factor)
     return pmid_to_factor
 
 
@@ -96,4 +111,5 @@ if __name__ == "__main__":
     check_data_file = "data/check_table3_fdr.csv"
     log_file = "log/check.log"
 
-    check_factors(pmid_to_factor, check_data_file, log_file)
+    # check_factors(pmid_to_factor, check_data_file, log_file)
+    get_pmid_to_factor("data/check_infection_fdr.csv")

@@ -1,0 +1,249 @@
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>retrospective</th>
+      <th>review</th>
+      <th>meta-analysis</th>
+      <th>undefined</th>
+      <th>prospective</th>
+      <th>rct</th>
+    </tr>
+    <tr>
+      <th>Factor</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Chemotherapy</th>
+      <td>34218708 - 30697126 - 26207019 - 26349890 - 24612469 - 29125332 - 30673943 - 28936124 - 32205131 - 24090605</td>
+      <td>25680892</td>
+      <td>37314592</td>
+      <td></td>
+      <td>34540095 - 33249623 - 33383236 - 25673995 - 27020965 - 33893843 - 23710585</td>
+      <td>32921123 - 31005243</td>
+    </tr>
+    <tr>
+      <th>Total parenteral nutrition</th>
+      <td>34218708 - 25997503</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>33298237</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>PICC infection</th>
+      <td>27161689 - 38105233 - 31073442 - 23633980 - 35285085 - 24090605 - 34980518</td>
+      <td>24811591</td>
+      <td>36897677</td>
+      <td>27033138 - 26623068 - 30589718</td>
+      <td>31900609 - 24439240 - 31970514 - 33019880 - 24436591</td>
+      <td>30704933 - 28978332 - 27240799</td>
+    </tr>
+    <tr>
+      <th>BMI</th>
+      <td>30697126 - 37573601 - 34511570 - 29872323 - 24911379 - 35701467</td>
+      <td>25680892</td>
+      <td></td>
+      <td></td>
+      <td>25673995 - 33244268 - 28218366 - 24781722</td>
+      <td>34973357</td>
+    </tr>
+    <tr>
+      <th>Smoking</th>
+      <td>30697126 - 36747971 - 25664112 - 38105233</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>33249623</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>PICC insertion procedure</th>
+      <td>30697126 - 33836784 - 26117624</td>
+      <td></td>
+      <td>31464692</td>
+      <td></td>
+      <td>24268631 - 27957644</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>Cancer</th>
+      <td>24612469</td>
+      <td></td>
+      <td></td>
+      <td>28796444</td>
+      <td>24268631</td>
+      <td>28619777</td>
+    </tr>
+    <tr>
+      <th>Biology ( blood platelet level_white blood cell level_triglycerides_fibrinogen)</th>
+      <td>25664112</td>
+      <td></td>
+      <td></td>
+      <td>28796444</td>
+      <td></td>
+      <td>32921123</td>
+    </tr>
+    <tr>
+      <th>ICU</th>
+      <td>37573601 - 24954426 - 28822403 - 32551112</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>Age</th>
+      <td>37573601 - 25953205 - 33388763 - 32205131</td>
+      <td></td>
+      <td></td>
+      <td>30632436</td>
+      <td>28149507 - 24781722</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>Hypertension</th>
+      <td>37573601</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>24983259</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>Slower blood flow velocity</th>
+      <td></td>
+      <td></td>
+      <td>33617142</td>
+      <td></td>
+      <td>32195936</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>Anticoagulants therapy</th>
+      <td>35071472</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>Surgery_type of surgery</th>
+      <td>34095299</td>
+      <td></td>
+      <td></td>
+      <td>25726426</td>
+      <td>22948189</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>Non-O blood type_ group B</th>
+      <td>32880203</td>
+      <td></td>
+      <td></td>
+      <td>35875074</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>Two or more lumens</th>
+      <td>24612469 - 23838218 - 30909723</td>
+      <td></td>
+      <td></td>
+      <td>30632436 - 27033138</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>History Of Thrombosis</th>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>30632436</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>Performans score_performance status_karnofsky_ECOG_Less activity_bedridden &gt; 72h</th>
+      <td>25664112</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>25673995</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>Power injectable PICC</th>
+      <td>23838218</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>Immunosuppression</th>
+      <td>23838218</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>PICC indwelling time</th>
+      <td>27542955</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>Gender</th>
+      <td>28936124 - 32551112</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>26339941</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>Thrombophilia</th>
+      <td></td>
+      <td>25680892</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>Others (COPD, IBD)</th>
+      <td>33388763</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>Number of comorbidities/HTA/Hyperglycemia</th>
+      <td>29659465</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>

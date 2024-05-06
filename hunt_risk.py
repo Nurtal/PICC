@@ -63,6 +63,61 @@ def scan_risk(target: str, text: str, log_file: str) -> bool:
     return target_can_be_a_risk
 
 
+def extract_risk(target: str, text: str) -> str:
+    """Extract risk sentence for a target within a text.
+
+    Args:
+        target (str) : the potential risk
+        test (str) : the context to scan
+
+    """
+
+    # parameters
+    risk_marker_list = [
+        "risk",
+        "factor",
+        "impact",
+        "associate",
+        "drive",
+        "correlation",
+        "correlate",
+        "more",
+        "high",
+        "low",
+        "less",
+        "increase",
+        "decrease",
+        "group",
+    ]
+
+    # step 1 - preprocess target and text
+    target = target.lower()
+    text = text.lower()
+    sentence_list = text.split(". ")
+    risk_sentences = []
+    for sentence in sentence_list:
+
+        # step 2 - check if target is present
+        if re.search(target, sentence):
+
+            # step 3 - Look for risk marker in the sentence
+            for risk in risk_marker_list:
+                if re.search(risk, sentence):
+
+                    # assign potential risk
+                    if sentence not in risk_sentences:
+                        risk_sentences.append(sentence)
+
+    # craft risk text
+    risk_text = ""
+    for s in risk_sentences:
+        risk_text += s + ". "
+    risk_text = risk_text[:-1]
+
+    # return scan result
+    return risk_text
+
+
 def assgin_risk_factor(
     pmid_to_factors: dict, pmid_to_text: dict, factor_to_target: dict
 ) -> dict:
@@ -125,6 +180,63 @@ def get_pmid_to_text(data_file: str) -> dict:
     return pmid_to_text
 
 
+def craft_risk_sentence_dataset(
+    pmid_to_factor, pmid_to_text, factor_to_target, output_filename
+):
+    """Create files to be analyzed by the llm"""
+
+    data = []
+    data_abstract = []
+    data_factor = []
+    for pmid in pmid_to_factor:
+        factor_list = pmid_to_factor[pmid]
+        text = pmid_to_text[pmid]
+        for factor in factor_list:
+
+            # deal with factor text
+            factor_text = ""
+            sentence_to_keep = []
+            for target in factor_to_target[factor]:
+                sentence_list = text.split(". ")
+                for sentence in sentence_list:
+                    if re.search(target, sentence):
+                        if sentence not in sentence_to_keep:
+                            sentence_to_keep.append(sentence)
+            for sentence in sentence_to_keep:
+                factor_text += f"{sentence}. "
+            factor_text = factor_text[:-1]
+
+            # deal with risk text
+            risk_text_list = []
+            for target in factor_to_target[factor]:
+                risk_text = extract_risk(target, text)
+                if risk_text not in risk_text_list:
+                    risk_text_list.append(risk_text)
+            risk_text = ""
+            for risk in risk_text_list:
+                risk_text += str(risk) + ". "
+            risk_text = risk_text[:-1]
+
+            # forge vector
+            data.append({"PMID": pmid, "FACTOR": factor, "TEXT": risk_text})
+            data_abstract.append({"PMID": pmid, "FACTOR": factor, "TEXT": text})
+            data_factor.append({"PMID": pmid, "FACTOR": factor, "TEXT": factor_text})
+
+    # save risk data
+    df = pd.DataFrame.from_dict(data)
+    df = df[~df["TEXT"].isin(["."])]
+    df.to_csv(output_filename, index=False)
+
+    # save factor data
+    df_factor = pd.DataFrame.from_dict(data_factor)
+    df_factor = df_factor[~df_factor["TEXT"].isin(["."])]
+    df_factor.to_csv(output_filename.replace(".csv", "_factor.csv"), index=False)
+
+    # save full data (abstract)
+    df_abstract = pd.DataFrame.from_dict(data_abstract)
+    df_abstract.to_csv(output_filename.replace(".csv", "_abstract.csv"), index=False)
+
+
 if __name__ == "__main__":
 
     # test parameters
@@ -132,83 +244,3 @@ if __name__ == "__main__":
     target = "lumens"
     abstract = "Conclusions: Immunosuppression and 3 PICC lumens were associated with increased risk of CLABSI. Power-injectable PICCs were associated with increased risk of CLABSI and VT formation. Postplacement adjustment of PICCs was not associated with increased risk of CLABSI or VT."
     test_abstract = "My cat is red. color have no impact on how stupid it is. Studies show that age is a risk factor for being stupid"
-
-    # if scan_risk(target, abstract):
-    #     print(f"{target} can be a risk !")
-    # else:
-    #     print(f"{target} doesn't seems to be a risk")
-
-    pmid_to_text = get_pmid_to_text("data/test.parquet")
-    pmid_to_factors = {
-        "24440542": [
-            "Advanced Age",
-            "Two or more lumens",
-            "Antibiotic therapy",
-            "Parenteral nutrition",
-            "PICC dwell time",
-            "Medical department admission (including ICU)",
-            "Hospital length of stay",
-        ]
-    }
-
-    factor_to_target = {
-        "Advanced Age": [" age ", "old", "older", "young", "elderly"],
-        "Chemotherapy": [
-            "chemotherapy",
-            "fluoropyrimidine",
-            "etoposide",
-            "carboplatin",
-            "docetaxel",
-        ],
-        "Two or more lumens": [
-            "dual-lumen",
-            "lumens",
-            "multiple-lumen",
-            "multilumen",
-            "triple lumen",
-            "triple-lumen",
-            "quadruple lumen",
-            "quadruple-lumen",
-        ],
-        "Antibiotic-coated catheters": ["impregnated", "coated"],
-        "Previous PICC": ["previous picc placement", "previous peripherally inserted"],
-        "Antibiotic therapy": [
-            "anti-bacterial",
-            "antifungal",
-            "anti-infective",
-            "antimicrobial",
-            "antibiotic",
-        ],
-        "Parenteral nutrition": ["parenteral nutrition"],
-        "Materials of PICC": ["polyurethanes", "silicones"],
-        "PICC dwell time": [
-            "catheter day",
-            "duration of picc",
-            "duration of peripherally",
-            "prolonged maintenance",
-            "catheter retention time",
-            "indwelling time",
-        ],
-        "Medical department admission (including ICU)": [
-            "intensive care unit",
-            "medical department admission",
-            "admission to",
-            "ICU",
-        ],
-        "Acute myeloid leukemia": ["leukemia"],
-        "Auto/allograft": ["autograft", "allograft"],
-        "Anticoagulants therapy": ["anticoagulant", "anti-coagulant"],
-        "Immunosuppression": ["immunosuppression", " aids", "immune function"],
-        "Hospital length of stay": ["hospital length of stay", "length of stay"],
-        "Seasonality (summer / warm)": ["season", "summer", "warm"],
-        "Operator experience": [
-            "experience of operator",
-            "experience of picc operator",
-        ],
-        "Postplacement": ["tip position", "tip malposition"],
-        "Fixation device": ["statlock", "fixation device"],
-        "Catheter care delay": ["catheter care delay"],
-        "Power-injectable piccs": ["power-injectable", "power injectable"],
-    }
-    pmid_to_risk = assgin_risk_factor(pmid_to_factors, pmid_to_text, factor_to_target)
-    print(pmid_to_risk)

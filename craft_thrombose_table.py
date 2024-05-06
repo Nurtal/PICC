@@ -2,6 +2,7 @@ import pandas as pd
 import re
 import hunt_risk
 import table_check
+import extract_information
 
 
 def get_thrombose_article():
@@ -30,6 +31,11 @@ def get_thrombose_article():
 
     df = df[df["PMID"].isin(pmid_to_keep)]
     print(f"[FILTER THROMBOSIS] => {df.shape[0]}")
+
+    # debug
+    target_pmid = "25673995"
+    if target_pmid in list(df["PMID"]):
+        print(f"[THROMBOSIS][{target_pmid}] present")
 
     df.to_parquet("data/thrombose_article.parquet")
 
@@ -367,6 +373,11 @@ def assign_factors():
                 target_list, tag, mh, ot, title, abstract, pmid, pmid_to_factor_list
             )
 
+    # debug
+    target_pmid = "29659465"
+    if target_pmid in pmid_to_factor_list:
+        print(f"[FACTOR][{target_pmid}] present")
+
     return pmid_to_factor_list
 
 
@@ -464,7 +475,6 @@ def craft_table():
         "Transplantation": ["transplantation"],
         "High intrathoracic pressure": ["intrathoracic press"],
         "PICC infection": ["infection"],
-        "Score": [],
         "Menopause_endocrine therapy_hormone use": [
             "menopause",
             "endocrine",
@@ -502,10 +512,46 @@ def craft_table():
         pmid_to_factors, pmid_to_text, factor_to_target
     )
 
+    # print(pmid_to_factors["29659465"])
+
+    # craft data for LLM
+    hunt_risk.craft_risk_sentence_dataset(
+        pmid_to_factors,
+        pmid_to_text,
+        factor_to_target,
+        "data/thrombose_risk_evaluation.csv",
+    )
+
     # run check
     table_check.check_factors(
-        pmid_to_factors, "data/check_thrombo_fdr.csv", "log/check_thrombose.log"
+        pmid_to_factors,
+        "data/check_thrombosis_fusion_cleaned.csv",
+        "log/check_thrombose.log",
     )
+
+    # extract verified pmid to factor
+    pmid_to_factor_verified = table_check.get_pmid_to_factor(
+        "data/check_thrombosis_fusion_cleaned.csv"
+    )
+
+    # run LLM to check risk factors
+    pmid_to_factors_llm = extract_information.run(
+        "data/thrombose_risk_evaluation.csv",
+        "data/thrombose_extracted_risk_with_llama3.csv",
+        "log/thrombose_extracted_risk_with_llama3.log",
+        "thrombosis",
+    )
+
+    # create supp list
+    print(f"[LLM] => {len(pmid_to_factors_llm)}")
+    print(f"[MANUAL] => {len(pmid_to_factor_verified)}")
+    print(f"[TOTAL] => {len(pmid_to_factors)}")
+    supp_file = open("log/thrombose_supplemental.csv", "w")
+    supp_file.write("PMID\n")
+    for pmid in pmid_to_factors:
+        if pmid not in pmid_to_factor_verified and pmid not in pmid_to_factors_llm:
+            supp_file.write(f"{pmid}\n")
+    supp_file.close()
 
     # extract list of factors
     factor_list = []
@@ -526,15 +572,36 @@ def craft_table():
 
         vector = {"Factor": factor}
         pmid_associated_to_factor = []
+        pmid_associated_to_factor_llm_approved = []
+        pmid_associated_to_factor_verified = []
         for pmid in pmid_to_factors:
             if factor in pmid_to_factors[pmid]:
                 pmid_associated_to_factor.append(pmid)
+
+                # approved by llm
+                if pmid in pmid_to_factors_llm:
+                    if factor in pmid_to_factors_llm[pmid]:
+                        if pmid not in pmid_associated_to_factor_llm_approved:
+                            pmid_associated_to_factor_llm_approved.append(pmid)
+
+                # manually verified
+                if pmid in pmid_to_factor_verified:
+                    if factor in pmid_to_factor_verified[pmid]:
+                        if pmid not in pmid_associated_to_factor_verified:
+                            pmid_associated_to_factor_verified.append(pmid)
 
         # fill status
         for status in status_list:
             status_line = ""
             for pmid in pmid_associated_to_factor:
                 if pmid_to_status[pmid] == status:
+
+                    # mark approved pmid
+                    if pmid in pmid_associated_to_factor_llm_approved:
+                        pmid = f"[X]{pmid}"
+                    if pmid in pmid_to_factor_verified:
+                        pmid = f"[V]{pmid}"
+
                     status_line += f"{pmid} - "
             status_line = status_line[:-2]
             vector[status] = status_line
@@ -581,8 +648,14 @@ def craft_table():
     for line in tmp_table:
         if re.search("^<table ", line):
             line = "<table id='machin'>\n"
+
+        # catch factor
+
         elif re.search("[0-9]{8}", line):
             for elt in re.findall("([0-9]{8})", line):
+
+                # check if factor picked by llm analysis
+
                 line = line.replace(
                     elt, f"<a href='https://pubmed.ncbi.nlm.nih.gov/{elt}/'>{elt}</a>"
                 )

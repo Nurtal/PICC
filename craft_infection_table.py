@@ -2,6 +2,7 @@ import pandas as pd
 import re
 import hunt_risk
 import table_check
+import extract_information
 
 
 def get_infection_article():
@@ -761,7 +762,11 @@ def craft_table():
         "Auto/allograft": ["autograft", "allograft"],
         "Anticoagulants therapy": ["anticoagulant", "anti-coagulant"],
         "Immunosuppression": ["immunosuppression", " aids", "immune function"],
-        "Hospital length of stay": ["hospital length of stay", "length of stay"],
+        "Hospital length of stay": [
+            "hospital length of stay",
+            "length of stay",
+            " los",
+        ],
         "Seasonality (summer / warm)": ["season", "summer", "warm"],
         "Operator experience": [
             "experience of operator",
@@ -787,6 +792,45 @@ def craft_table():
         pmid_to_factors, pmid_to_text, factor_to_target
     )
 
+    # craft data for LLM
+    hunt_risk.craft_risk_sentence_dataset(
+        pmid_to_factors,
+        pmid_to_text,
+        factor_to_target,
+        "data/infection_risk_evaluation.csv",
+    )
+
+    # run check
+    table_check.check_factors(
+        pmid_to_factors,
+        "data/check_infection_fdr.csv",
+        "log/check_infection.log",
+    )
+
+    # run LLM to check risk factors
+    pmid_to_factors_llm = extract_information.run(
+        "data/infection_risk_evaluation.csv",
+        "data/infection_extracted_risk_with_llama3.csv",
+        "log/infection_extracted_risk_with_llama3.log",
+        "infection",
+    )
+
+    # extract verified pmid to factor
+    pmid_to_factor_verified = table_check.get_pmid_to_factor(
+        "data/check_infection_fdr.csv"
+    )
+
+    # create supp list
+    print(f"[LLM] => {len(pmid_to_factors_llm)}")
+    print(f"[MANUAL] => {len(pmid_to_factor_verified)}")
+    print(f"[TOTAL] => {len(pmid_to_factors)}")
+    supp_file = open("log/infection_supplemental.csv", "w")
+    supp_file.write("PMID\n")
+    for pmid in pmid_to_factors:
+        if pmid not in pmid_to_factor_verified and pmid not in pmid_to_factors_llm:
+            supp_file.write(f"{pmid}\n")
+    supp_file.close()
+
     # extract list of factors
     factor_list = []
     for fl in pmid_to_factors.values():
@@ -806,15 +850,37 @@ def craft_table():
 
         vector = {"Factor": factor}
         pmid_associated_to_factor = []
+        pmid_associated_to_factor_llm_approved = []
+        pmid_associated_to_factor_verified = []
         for pmid in pmid_to_factors:
             if factor in pmid_to_factors[pmid]:
+
                 pmid_associated_to_factor.append(pmid)
+
+                # approved by llm
+                if pmid in pmid_to_factors_llm:
+                    if factor in pmid_to_factors_llm[pmid]:
+                        if pmid not in pmid_associated_to_factor_llm_approved:
+                            pmid_associated_to_factor_llm_approved.append(pmid)
+
+                # manually verified
+                if pmid in pmid_to_factor_verified:
+                    if factor in pmid_to_factor_verified[pmid]:
+                        if pmid not in pmid_associated_to_factor_verified:
+                            pmid_associated_to_factor_verified.append(pmid)
 
         # fill status
         for status in status_list:
             status_line = ""
             for pmid in pmid_associated_to_factor:
                 if pmid_to_status[pmid] == status:
+
+                    # mark approved pmid
+                    if pmid in pmid_associated_to_factor_llm_approved:
+                        pmid = f"[X]{pmid}"
+                    if pmid in pmid_to_factor_verified:
+                        pmid = f"[V]{pmid}"
+
                     status_line += f"{pmid} - "
             status_line = status_line[:-2]
             vector[status] = status_line
@@ -861,11 +927,14 @@ def craft_table():
     for line in tmp_table:
         if re.search("^<table ", line):
             line = "<table id='machin'>\n"
+
         elif re.search("[0-9]{8}", line):
             for elt in re.findall("([0-9]{8})", line):
                 line = line.replace(
-                    elt, f"<a href='https://pubmed.ncbi.nlm.nih.gov/{elt}/'>{elt}</a>"
+                    elt,
+                    f"<a href='https://pubmed.ncbi.nlm.nih.gov/{elt}/'>{elt}</a>",
                 )
+
         table_data.write(line)
     table_data.close()
 

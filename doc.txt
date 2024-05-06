@@ -1,0 +1,35 @@
+Table infection,
+
+Verifié par IA : 37
+Vérifié manuellement : 19
+ramené par les mots clefs : 260
+total : 300 
+
+
+on perds les 3 PMID suivants par rapport au tableau (publiés avant 2013)
+23010088 -> 2012
+20857109 -> 2010
+21460466 -> 2011
+
+
+
+Table Thrombose
+Vérifié par IA : 113
+Vérifié à la main : 82
+ramené par les mots clefs : 147
+total 284
+
+22444157 -> 2012
+21541826 -> 2011
+11941543 -> 2002
+19753569 -> 2009
+20923799 -> 2010
+22113818 -> 2012
+10928518 -> 2000
+18596317 -> 2008
+22266584 -> 2012
+
+
+
+
+

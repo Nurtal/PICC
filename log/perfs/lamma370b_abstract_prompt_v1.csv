@@ -1,0 +1,12 @@
+[ACC] => 0.75
+[AUC] => 0.7395833333333334
+[MISS CLASSIFIED] -> 34218708_INFECTION_Parenteral nutrition => 1 instead of 0 
+[MISS CLASSIFIED] -> 25295962_THROMBOSIS_PICC insertion procedure => 0 instead of 1 
+[MISS CLASSIFIED] -> 25673995_THROMBOSIS_Cancer => 1 instead of 0 
+[MISS CLASSIFIED] -> 25953205_THROMBOSIS_PICC infection => 1 instead of 0 
+[MISS CLASSIFIED] -> 33383236_THROMBOSIS_Chemotherapy => 1 instead of 0 
+[MISS CLASSIFIED] -> 29659465_THROMBOSIS_Diabete => 0 instead of 1 
+[MISS CLASSIFIED] -> 36644041_THROMBOSIS_Surgery_type of surgery => 0 instead of 1 
+[MISS CLASSIFIED] -> 25680892_THROMBOSIS_BMI => 0 instead of 1 
+[MISS CLASSIFIED] -> 34794291_THROMBOSIS_Cancer => 1 instead of 0 
+[MISS CLASSIFIED] -> 26202391_INFECTION_Anticoagulants therapy => 0 instead of 1 

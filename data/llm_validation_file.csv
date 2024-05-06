@@ -1,0 +1,23 @@
+PMID,COMPLICATION,FACTOR,LLAMA3,MANUAL
+34723657,INFECTION,Antibiotic therapy,Yes,No
+33908337,INFECTION,Medical department admission (including ICU),Yes,No
+24440542,INFECTION,Hospital length of stay,Yes,Yes
+36438461,INFECTION,Hospital length of stay,Yes,Yes
+25120012,INFECTION,PICC dwell time,Yes,No
+36921694,INFECTION,Hospital length of stay,Yes,Yes
+26045668,INFECTION,Catheter care delay,Yes,Yes
+33298237,INFECTION,Parenteral nutrition,Yes,Yes
+25198813,INFECTION,Power-injectable piccs,Yes,No
+34218708,INFECTION,Parenteral nutrition,Yes,No
+33409725,INFECTION,Chemotherapy,No,No
+24090605,INFECTION,Acute myeloid leukemia,No,No
+26202391,INFECTION,Auto/allograft,Yes,Yes
+36597793,INFECTION,Previous PICC,Yes,Yes
+27020965,INFECTION,Chemotherapy,Yes,Yes
+34628865,INFECTION,Chemotherapy,Yes,No
+25295962,THROMBOSIS,PICC insertion procedure,Yes,No
+25673995,THROMBOSIS,Cancer,Yes,No
+23002096,THROMBOSIS,Cancer,Yes,No
+30560363,THROMBOSIS,PICC infection,Yes,No
+26113804,THROMBOSIS,PICC infection,Yes,No
+25953205,THROMBOSIS,PICC infection,Yes,No

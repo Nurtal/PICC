@@ -5,15 +5,21 @@ import re
 def filter():
     """ """
 
+    target_pmid = "24781722"
+
     # load data
     df = pd.read_parquet("data/pubmed.parquet")
     print(f"[LOAD DATA] => {df.shape[0]}")
+    if target_pmid in list(df["PMID"]):
+        print(f"[{target_pmid}] initially present")
 
     # deal with date
     df["YEAR"] = pd.to_numeric(df["YEAR"])
     df = df[df["YEAR"] >= 2013]
     df = df[df["YEAR"] <= 2023]
     print(f"[FILTER DATE] => {df.shape[0]}")
+    if target_pmid in list(df["PMID"]):
+        print(f"[DATE][{target_pmid}] present")
 
     # deal with lang
     pmid_to_keep = []
@@ -24,6 +30,8 @@ def filter():
             pmid_to_keep.append(pmid)
     df = df[df["PMID"].isin(pmid_to_keep)]
     print(f"[FILTER LANGUAGE] => {df.shape[0]}")
+    if target_pmid in list(df["PMID"]):
+        print(f"[LANGUAGE][{target_pmid}] initially present")
 
     # deal with type
     pmid_to_keep = []
@@ -32,18 +40,27 @@ def filter():
             pmid_to_keep.append(row["PMID"])
     df = df[df["PMID"].isin(pmid_to_keep)]
     print(f"[FILTER CASE REPORT] => {df.shape[0]}")
+    if target_pmid in list(df["PMID"]):
+        print(f"[CASE-REPORT][{target_pmid}] initially present")
 
     # deal with child
     pmid_to_keep = []
     pmid_to_drop = []
+    target_list = ["child", "neonate", "neonatal", "newborn", " infant"]
     for index, row in df.iterrows():
         pmid = row["PMID"]
         mh = row["MH"]
         ot = row["OT"]
         title = row["TITLE"]
+        abstract = row["ABSTRACT"]
 
-        if re.search("neonatal", title.lower()):
-            pmid_to_drop.append(pmid)
+        for target in target_list:
+
+            if re.search(target, title.lower()):
+                pmid_to_drop.append(pmid)
+
+            if re.search(target, abstract.lower()):
+                pmid_to_drop.append(pmid)
 
         try:
             if (
@@ -67,6 +84,8 @@ def filter():
     df = df[df["PMID"].isin(pmid_to_keep)]
     df = df[~df["PMID"].isin(pmid_to_drop)]
     print(f"[FILTER CHILD] => {df.shape[0]}")
+    if target_pmid in list(df["PMID"]):
+        print(f"[CHILD][{target_pmid}] present")
 
     # deal with animals
     pmid_to_keep = []
@@ -87,6 +106,8 @@ def filter():
             pass
     df = df[df["PMID"].isin(pmid_to_keep)]
     print(f"[FILTER ANIMAL] => {df.shape[0]}")
+    if target_pmid in list(df["PMID"]):
+        print(f"[ANIMAL][{target_pmid}] present")
 
     # deal with complication
     pmid_to_keep = []
@@ -139,6 +160,8 @@ def filter():
 
     df = df[df["PMID"].isin(pmid_to_keep)]
     print(f"[FILTER COMPLICATION] => {df.shape[0]}")
+    if target_pmid in list(df["PMID"]):
+        print(f"[COMPLICATION][{target_pmid}] present")
 
     # save data
     df.to_parquet("data/pubmed_filtered.parquet")
@@ -173,4 +196,4 @@ def check():
 if __name__ == "__main__":
 
     filter()
-    check()
+    # check()

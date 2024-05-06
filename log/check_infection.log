@@ -1,0 +1,167 @@
+[OK] Found factor Two or more lumens for pmid 24440542
+[OK] Found factor Medical department admission (including ICU) for pmid 24440542
+[OK] Found factor Hospital length of stay for pmid 24440542
+[ERROR] Factor Hospital length of stay not found for pmid 34600737
+[ERROR] Factor Antibiotic therapy not found for pmid 34218708
+[ERROR] Factor Parenteral nutrition not found for pmid 34218708
+[ERROR] Factor Medical department admission (including ICU) not found for pmid 24811591
+[ERROR] Factor Medical department admission (including ICU) not found for pmid 30190250
+[ERROR] Factor Antibiotic therapy not found for pmid 34593288
+[ERROR][KEY] Factor Advanced Age not found in table
+[OK] Found factor Previous PICC for pmid 31937457
+[OK] Found factor Medical department admission (including ICU) for pmid 31937457
+[ERROR][KEY] Factor PICC dwell time not found in table
+[ERROR] Factor Chemotherapy not found for pmid 34628865
+[ERROR][KEY] Factor PICC dwell time not found in table
+[ERROR] Factor Two or more lumens not found for pmid 29118410
+[ERROR] Factor Antibiotic therapy not found for pmid 29118410
+[ERROR] Factor Medical department admission (including ICU) not found for pmid 29118410
+[ERROR] Factor Antibiotic therapy not found for pmid 34723657
+[ERROR] Factor Hospital length of stay not found for pmid 36438461
+[ERROR] Factor Previous PICC not found for pmid 36597793
+[ERROR] Factor Medical department admission (including ICU) not found for pmid 36597793
+[ERROR] Factor Acute myeloid leukemia not found for pmid 25910751
+[ERROR] Factor Chemotherapy not found for pmid 34511570
+[ERROR] Factor Acute myeloid leukemia not found for pmid 34511570
+[ERROR] Factor Immunosuppression not found for pmid 33633889
+[ERROR] Factor Chemotherapy not found for pmid 33409725
+[ERROR] Factor Acute myeloid leukemia not found for pmid 33409725
+[ERROR][KEY] Factor PICC dwell time not found in table
+[OK] Found factor Operator experience for pmid 29516966
+[OK] Found factor Two or more lumens for pmid 32028425
+[OK] Found factor Antibiotic therapy for pmid 32028425
+[ERROR] Factor Postplacement not found for pmid 34498477
+[ERROR] Factor Two or more lumens not found for pmid 28807074
+[ERROR] Factor Parenteral nutrition not found for pmid 28807074
+[ERROR][KEY] Factor PICC dwell time not found in table
+[ERROR] Factor Parenteral nutrition not found for pmid 24439240
+[ERROR][KEY] Factor PICC dwell time not found in table
+[ERROR][KEY] Factor Advanced Age not found in table
+[ERROR] Factor Chemotherapy not found for pmid 30755503
+[ERROR] Factor Chemotherapy not found for pmid 33746117
+[ERROR] Factor Two or more lumens not found for pmid 27033138
+[ERROR] Factor Antibiotic therapy not found for pmid 32057552
+[ERROR][KEY] Factor PICC dwell time not found in table
+[ERROR] Factor Medical department admission (including ICU) not found for pmid 24954426
+[ERROR] Factor Antibiotic therapy not found for pmid 38250594
+[OK] Found factor Two or more lumens for pmid 23838218
+[OK] Found factor Immunosuppression for pmid 23838218
+[ERROR] Factor Postplacement not found for pmid 23838218
+[OK] Found factor Power-injectable piccs for pmid 23838218
+[OK] Found factor Seasonality (summer / warm) for pmid 26045668
+[OK] Found factor Postplacement for pmid 26045668
+[OK] Found factor Fixation device for pmid 26045668
+[OK] Found factor Catheter care delay for pmid 26045668
+[ERROR][KEY] Factor Advanced Age not found in table
+[ERROR] Factor Chemotherapy not found for pmid 30704933
+[ERROR] Factor Chemotherapy not found for pmid 27020965
+[ERROR][KEY] Factor PICC dwell time not found in table
+[ERROR] Factor Two or more lumens not found for pmid 37052429
+[OK] Found factor Auto/allograft for pmid 26202391
+[OK] Found factor Anticoagulants therapy for pmid 26202391
+[OK] Found factor Antibiotic-coated catheters for pmid 30180989
+[ERROR] Factor Antibiotic therapy not found for pmid 30180989
+[OK] Found factor Acute myeloid leukemia for pmid 30180989
+[OK] Found factor Immunosuppression for pmid 30180989
+[ERROR] Factor Medical department admission (including ICU) not found for pmid 32709498
+[ERROR] Factor Chemotherapy not found for pmid 37370862
+[ERROR] Factor Two or more lumens not found for pmid 37370862
+[OK] Found factor Two or more lumens for pmid 23295565
+[OK] Found factor Medical department admission (including ICU) for pmid 23295565
+[ERROR] Factor Medical department admission (including ICU) not found for pmid 30560363
+[ERROR] Factor Two or more lumens not found for pmid 30379146
+[ERROR][KEY] Factor PICC dwell time not found in table
+[ERROR][KEY] Factor PICC dwell time not found in table
+[ERROR] Factor Antibiotic-coated catheters not found for pmid 28978332
+[ERROR][KEY] Factor PICC dwell time not found in table
+[ERROR] Factor Chemotherapy not found for pmid 37046808
+[ERROR] Factor Acute myeloid leukemia not found for pmid 37046808
+[ERROR] Factor Antibiotic therapy not found for pmid 36845901
+[ERROR] Factor Hospital length of stay not found for pmid 36845901
+[ERROR][KEY] Factor PICC dwell time not found in table
+[ERROR] Factor Hospital length of stay not found for pmid 24911379
+[ERROR][KEY] Factor PICC dwell time not found in table
+[ERROR] Factor Acute myeloid leukemia not found for pmid 28540264
+[OK] Found factor Immunosuppression for pmid 28540264
+[OK] Found factor Seasonality (summer / warm) for pmid 28540264
+[ERROR] Factor Chemotherapy not found for pmid 37736715
+[ERROR][KEY] Factor PICC dwell time not found in table
+[ERROR] Factor Antibiotic-coated catheters not found for pmid 27240799
+[ERROR] Factor Antibiotic therapy not found for pmid 27240799
+[ERROR] Factor Medical department admission (including ICU) not found for pmid 37435240
+[ERROR] Factor Medical department admission (including ICU) not found for pmid 35862722
+[ERROR] Factor Antibiotic-coated catheters not found for pmid 33908337
+[ERROR] Factor Antibiotic therapy not found for pmid 33908337
+[ERROR] Factor Medical department admission (including ICU) not found for pmid 33908337
+[ERROR][KEY] Factor Advanced Age not found in table
+[ERROR] Factor Two or more lumens not found for pmid 29489707
+[ERROR] Factor Two or more lumens not found for pmid 34973357
+[ERROR] Factor Two or more lumens not found for pmid 33652363
+[ERROR] Factor Medical department admission (including ICU) not found for pmid 33652363
+[ERROR] Factor Two or more lumens not found for pmid 36960818
+[ERROR] Factor Medical department admission (including ICU) not found for pmid 26519981
+[ERROR] Factor Medical department admission (including ICU) not found for pmid 35382174
+[ERROR][KEY] Factor PICC dwell time not found in table
+[ERROR] Factor Chemotherapy not found for pmid 33019880
+[ERROR][KEY] Factor Advanced Age not found in table
+[ERROR] Factor Hospital length of stay not found for pmid 30348912
+[ERROR][KEY] Factor PICC dwell time not found in table
+[ERROR] Factor Antibiotic therapy not found for pmid 33084898
+[ERROR] Factor Medical department admission (including ICU) not found for pmid 28822403
+[ERROR][KEY] Factor PICC dwell time not found in table
+[ERROR] Factor Medical department admission (including ICU) not found for pmid 25782897
+[ERROR] Factor Hospital length of stay not found for pmid 26368787
+[ERROR] Factor Antibiotic therapy not found for pmid 31387123
+[ERROR] Factor Parenteral nutrition not found for pmid 26269383
+[ERROR][KEY] Factor PICC dwell time not found in table
+[ERROR] Factor Antibiotic therapy not found for pmid 31565960
+[ERROR] Factor Parenteral nutrition not found for pmid 37146111
+[ERROR] Factor Parenteral nutrition not found for pmid 32770871
+[ERROR] Factor Two or more lumens not found for pmid 29377971
+[ERROR][KEY] Factor PICC dwell time not found in table
+[ERROR] Factor Antibiotic therapy not found for pmid 34663558
+[ERROR] Factor Parenteral nutrition not found for pmid 36767070
+[ERROR] Factor Parenteral nutrition not found for pmid 25120012
+[ERROR][KEY] Factor PICC dwell time not found in table
+[ERROR] Factor Two or more lumens not found for pmid 34842905
+[ERROR] Factor Medical department admission (including ICU) not found for pmid 36921694
+[ERROR] Factor Hospital length of stay not found for pmid 36921694
+[ERROR] Factor Antibiotic-coated catheters not found for pmid 36507144
+[ERROR] Factor Antibiotic therapy not found for pmid 36507144
+[ERROR] Factor Medical department admission (including ICU) not found for pmid 25374804
+[ERROR] Factor Medical department admission (including ICU) not found for pmid 37151085
+[ERROR] Factor Hospital length of stay not found for pmid 37151085
+[ERROR] Factor Antibiotic therapy not found for pmid 34258686
+[ERROR][KEY] Factor PICC dwell time not found in table
+[ERROR] Factor Antibiotic therapy not found for pmid 35847566
+[ERROR][KEY] Factor PICC dwell time not found in table
+[ERROR] Factor Antibiotic-coated catheters not found for pmid 29293304
+[ERROR] Factor Antibiotic therapy not found for pmid 29293304
+[ERROR][KEY] Factor Advanced Age not found in table
+[OK] Found factor Two or more lumens for pmid 30845210
+[OK] Found factor Hospital length of stay for pmid 30845210
+[ERROR] Factor Medical department admission (including ICU) not found for pmid 32367764
+[ERROR] Factor Power-injectable piccs not found for pmid 32367764
+[ERROR] Factor Antibiotic therapy not found for pmid 34750685
+[ERROR] Factor Acute myeloid leukemia not found for pmid 24090605
+[ERROR] Factor Medical department admission (including ICU) not found for pmid 37114756
+[ERROR] Factor Hospital length of stay not found for pmid 37114756
+[ERROR] Factor Parenteral nutrition not found for pmid 23002096
+[ERROR] Factor Antibiotic therapy not found for pmid 25656251
+[ERROR] Factor Antibiotic therapy not found for pmid 28651885
+[ERROR] Factor Power-injectable piccs not found for pmid 25198813
+[ERROR] Factor Two or more lumens not found for pmid 30391696
+[ERROR] Factor Antibiotic therapy not found for pmid 37576517
+[OK] Found factor Parenteral nutrition for pmid 33298237
+[ERROR][KEY] Factor PICC dwell time not found in table
+[OK] Found factor Medical department admission (including ICU) for pmid 33298237
+[ERROR] Factor Parenteral nutrition not found for pmid 25852128
+[ERROR][KEY] Factor PICC dwell time not found in table
+[ERROR] Factor Antibiotic therapy not found for pmid 29595367
+[ERROR] Factor Chemotherapy not found for pmid 31674857
+[ERROR] Factor Antibiotic therapy not found for pmid 34699089
+[ERROR] Factor Medical department admission (including ICU) not found for pmid 32205954
+[OK] Found factor Seasonality (summer / warm) for pmid 25987475
+[MISSING] 23010088 is missing for factor Antibiotic-coated catheters
+[MISSING] 20857109 is missing for factor Previous PICC
+[MISSING] 21460466 is missing for factor Medical department admission (including ICU)

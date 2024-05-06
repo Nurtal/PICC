@@ -1,0 +1,490 @@
+[ERROR] Factor Gender not found for pmid 34600737
+[ERROR] Factor Chemotherapy not found for pmid 34218708
+[ERROR] Factor Total parenteral nutrition not found for pmid 34218708
+[ERROR] Factor PICC infection not found for pmid 34218708
+[ERROR] Factor Chemotherapy not found for pmid 37314592
+[ERROR] Factor Cancer not found for pmid 37314592
+[OK] Found factor ICU for pmid 24811591
+[ERROR] Factor PICC infection not found for pmid 24811591
+[ERROR] Factor Chemotherapy not found for pmid 30697126
+[ERROR] Factor Cancer not found for pmid 30697126
+[OK] Found factor BMI for pmid 30697126
+[ERROR] Factor Smoking not found for pmid 30697126
+[ERROR] Factor PICC insertion procedure not found for pmid 30697126
+[OK] Found factor Cancer for pmid 28796444
+[ERROR] Factor PICC insertion procedure not found for pmid 28796444
+[ERROR] Factor Biology ( blood platelet level_white blood cell level_triglycerides_fibrinogen) not found for pmid 28796444
+[ERROR] Factor PICC infection not found for pmid 31324590
+[ERROR] Factor Slower blood flow velocity not found for pmid 36601900
+[ERROR] Factor PICC infection not found for pmid 35802673
+[ERROR] Factor Chemotherapy not found for pmid 33889013
+[ERROR] Factor Cancer not found for pmid 33889013
+[ERROR] Factor Biology ( blood platelet level_white blood cell level_triglycerides_fibrinogen) not found for pmid 33889013
+[ERROR] Factor PICC infection not found for pmid 33719694
+[ERROR] Factor PICC infection not found for pmid 36897677
+[ERROR] Factor Diabete not found for pmid 23715775
+[ERROR] Factor PICC insertion procedure not found for pmid 23715775
+[ERROR] Factor ICU not found for pmid 37573601
+[ERROR] Factor Diabete not found for pmid 37573601
+[ERROR] Factor BMI not found for pmid 37573601
+[ERROR] Factor Age not found for pmid 37573601
+[ERROR] Factor Biology ( blood platelet level_white blood cell level_triglycerides_fibrinogen) not found for pmid 37573601
+[ERROR] Factor Hypertension not found for pmid 37573601
+[ERROR] Factor Chemotherapy not found for pmid 34540095
+[ERROR] Factor Cancer not found for pmid 34540095
+[ERROR] Factor Performans score_performance status_karnofsky_ECOG_Less activity_bedridden > 72h not found for pmid 34540095
+[ERROR] Factor Cancer not found for pmid 34738565
+[ERROR] Factor Smoking not found for pmid 36747971
+[ERROR] Factor PICC infection not found for pmid 34723657
+[ERROR] Factor PICC infection not found for pmid 31387422
+[ERROR] Factor Cancer not found for pmid 32195936
+[OK] Found factor Slower blood flow velocity for pmid 32195936
+[ERROR] Factor Cancer not found for pmid 27161689
+[ERROR] Factor Age not found for pmid 27161689
+[ERROR] Factor PICC infection not found for pmid 27161689
+[ERROR] Factor Cancer not found for pmid 31724074
+[ERROR] Factor Biology ( blood platelet level_white blood cell level_triglycerides_fibrinogen) not found for pmid 37445515
+[ERROR] Factor Anticoagulants therapy not found for pmid 35071472
+[ERROR] Factor Performans score_performance status_karnofsky_ECOG_Less activity_bedridden > 72h not found for pmid 33617142
+[ERROR] Factor Slower blood flow velocity not found for pmid 33617142
+[ERROR] Factor Chemotherapy not found for pmid 32921123
+[ERROR] Factor Biology ( blood platelet level_white blood cell level_triglycerides_fibrinogen) not found for pmid 32921123
+[OK] Found factor Surgery_type of surgery for pmid 25726426
+[ERROR] Factor PICC infection not found for pmid 28386787
+[ERROR] Factor Cancer not found for pmid 37553006
+[OK] Found factor Cancer for pmid 34613657
+[ERROR] Factor PICC infection not found for pmid 35216538
+[ERROR] Factor Cancer not found for pmid 33148905
+[ERROR] Factor PICC infection not found for pmid 33148905
+[OK] Found factor Cancer for pmid 25910751
+[ERROR] Factor PICC infection not found for pmid 25910751
+[ERROR] Factor PICC insertion procedure not found for pmid 25593110
+[ERROR] Factor PICC infection not found for pmid 32441173
+[ERROR] Factor PICC infection not found for pmid 33782091
+[ERROR] Factor Chemotherapy not found for pmid 34511570
+[ERROR] Factor Cancer not found for pmid 34511570
+[ERROR] Factor BMI not found for pmid 34511570
+[ERROR] Factor PICC infection not found for pmid 34511570
+[OK] Found factor Chemotherapy for pmid 33249623
+[ERROR] Factor Cancer not found for pmid 33249623
+[OK] Found factor Smoking for pmid 33249623
+[ERROR] Factor PICC infection not found for pmid 31900609
+[ERROR] Factor Cancer not found for pmid 34794291
+[ERROR] Factor Performans score_performance status_karnofsky_ECOG_Less activity_bedridden > 72h not found for pmid 34794291
+[ERROR] Factor PICC infection not found for pmid 34794291
+[ERROR] Factor PICC infection not found for pmid 30683751
+[ERROR] Factor PICC insertion procedure not found for pmid 37333869
+[ERROR] Factor PICC infection not found for pmid 37333869
+[OK] Found factor Chemotherapy for pmid 26207019
+[OK] Found factor Cancer for pmid 26207019
+[ERROR] Factor PICC infection not found for pmid 33499716
+[ERROR] Factor Non-O blood type_ group B not found for pmid 35875074
+[ERROR] Factor Cancer not found for pmid 24268631
+[ERROR] Factor PICC insertion procedure not found for pmid 24268631
+[ERROR] Factor Chemotherapy not found for pmid 38072566
+[ERROR] Factor PICC insertion procedure not found for pmid 38072566
+[ERROR] Factor PICC infection not found for pmid 38072566
+[ERROR] Factor Number of comorbidities/HTA/Hyperglycemia not found for pmid 34373674
+[OK] Found factor Surgery_type of surgery for pmid 34373674
+[ERROR] Factor PICC infection not found for pmid 34373674
+[OK] Found factor PICC indwelling time for pmid 29615373
+[ERROR] Factor Chemotherapy not found for pmid 26349890
+[OK] Found factor Cancer for pmid 26349890
+[OK] Found factor PICC insertion procedure for pmid 26349890
+[ERROR] Factor Chemotherapy not found for pmid 33383236
+[ERROR] Factor Cancer not found for pmid 33383236
+[OK] Found factor Two or more lumens for pmid 24612469
+[OK] Found factor Chemotherapy for pmid 24612469
+[OK] Found factor Cancer for pmid 24612469
+[ERROR] Factor Performans score_performance status_karnofsky_ECOG_Less activity_bedridden > 72h not found for pmid 24612469
+[ERROR] Factor PICC infection not found for pmid 35236188
+[ERROR] Factor Age not found for pmid 29408616
+[ERROR] Factor Cancer not found for pmid 34103988
+[OK] Found factor Biology ( blood platelet level_white blood cell level_triglycerides_fibrinogen) for pmid 34103988
+[ERROR] Factor Chemotherapy not found for pmid 29125332
+[OK] Found factor Cancer for pmid 29125332
+[ERROR] Factor PICC insertion procedure not found for pmid 29125332
+[OK] Found factor Cancer for pmid 27078849
+[OK] Found factor Two or more lumens for pmid 30632436
+[ERROR] Factor Age not found for pmid 30632436
+[OK] Found factor History Of Thrombosis for pmid 30632436
+[ERROR] Factor PICC insertion procedure not found for pmid 34498477
+[ERROR] Factor PICC infection not found for pmid 34498477
+[ERROR] Factor PICC insertion procedure not found for pmid 33836784
+[ERROR] Factor PICC infection not found for pmid 32928286
+[ERROR] Factor Two or more lumens not found for pmid 25295962
+[ERROR] Factor Age not found for pmid 25295962
+[ERROR] Factor PICC insertion procedure not found for pmid 25295962
+[ERROR] Factor Biology ( blood platelet level_white blood cell level_triglycerides_fibrinogen) not found for pmid 34107707
+[ERROR] Factor PICC infection not found for pmid 34107707
+[ERROR] Factor PICC indwelling time not found for pmid 37070255
+[ERROR] Factor PICC infection not found for pmid 25501778
+[ERROR] Factor Total parenteral nutrition not found for pmid 24439240
+[ERROR] Factor PICC infection not found for pmid 24439240
+[ERROR] Factor PICC infection not found for pmid 23876203
+[ERROR] Factor Chemotherapy not found for pmid 25935657
+[ERROR] Factor Age not found for pmid 28149507
+[ERROR] Factor Chemotherapy not found for pmid 30755503
+[ERROR] Factor Gender not found for pmid 30755503
+[ERROR] Factor Age not found for pmid 30755503
+[OK] Found factor Chemotherapy for pmid 25673995
+[ERROR] Factor Cancer not found for pmid 25673995
+[OK] Found factor BMI for pmid 25673995
+[OK] Found factor Performans score_performance status_karnofsky_ECOG_Less activity_bedridden > 72h for pmid 25673995
+[ERROR] Factor Cancer not found for pmid 23440314
+[ERROR] Factor Biology ( blood platelet level_white blood cell level_triglycerides_fibrinogen) not found for pmid 23440314
+[ERROR] Factor PICC insertion procedure not found for pmid 27978519
+[ERROR] Factor Total parenteral nutrition not found for pmid 27978519
+[OK] Found factor Cancer for pmid 29872323
+[OK] Found factor BMI for pmid 29872323
+[OK] Found factor Performans score_performance status_karnofsky_ECOG_Less activity_bedridden > 72h for pmid 29872323
+[ERROR] Factor BMI not found for pmid 25664112
+[ERROR] Factor Smoking not found for pmid 25664112
+[OK] Found factor Number of comorbidities/HTA/Hyperglycemia for pmid 25664112
+[OK] Found factor Performans score_performance status_karnofsky_ECOG_Less activity_bedridden > 72h for pmid 25664112
+[ERROR] Factor Biology ( blood platelet level_white blood cell level_triglycerides_fibrinogen) not found for pmid 25664112
+[OK] Found factor Two or more lumens for pmid 27033138
+[ERROR] Factor PICC infection not found for pmid 27033138
+[ERROR] Factor Cancer not found for pmid 24246096
+[ERROR] Factor PICC indwelling time not found for pmid 27179394
+[ERROR] Factor PICC infection not found for pmid 27179394
+[ERROR] Factor ICU not found for pmid 24954426
+[ERROR] Factor Transplantation not found for pmid 24954426
+[ERROR] Factor PICC infection not found for pmid 24954426
+[OK] Found factor Two or more lumens for pmid 23838218
+[OK] Found factor Power injectable PICC for pmid 23838218
+[OK] Found factor Immunosuppression for pmid 23838218
+[ERROR] Factor PICC insertion procedure not found for pmid 23838218
+[ERROR] Factor PICC infection not found for pmid 23838218
+[ERROR] Factor Chemotherapy not found for pmid 24005884
+[ERROR] Factor PICC indwelling time not found for pmid 24005884
+[ERROR] Factor Biology ( blood platelet level_white blood cell level_triglycerides_fibrinogen) not found for pmid 27895356
+[ERROR] Factor PICC infection not found for pmid 27895356
+[ERROR] Factor PICC infection not found for pmid 31970514
+[ERROR] Factor Chemotherapy not found for pmid 30704933
+[ERROR] Factor Age not found for pmid 30704933
+[ERROR] Factor PICC infection not found for pmid 30704933
+[ERROR] Factor Cancer not found for pmid 34432170
+[ERROR] Factor Biology ( blood platelet level_white blood cell level_triglycerides_fibrinogen) not found for pmid 34432170
+[ERROR] Factor Surgery_type of surgery not found for pmid 34432170
+[OK] Found factor Menopause_endocrine therapy_hormone use for pmid 34432170
+[ERROR] Factor Cancer not found for pmid 27542955
+[ERROR] Factor PICC indwelling time not found for pmid 27542955
+[ERROR] Factor Chemotherapy not found for pmid 27020965
+[ERROR] Factor PICC insertion procedure not found for pmid 27020965
+[ERROR] Factor PICC indwelling time not found for pmid 27020965
+[ERROR] Factor PICC infection not found for pmid 27020965
+[ERROR] Factor Cancer not found for pmid 35034480
+[OK] Found factor Chemotherapy for pmid 33893843
+[ERROR] Factor Cancer not found for pmid 33893843
+[OK] Found factor Biology ( blood platelet level_white blood cell level_triglycerides_fibrinogen) for pmid 33893843
+[ERROR] Factor PICC infection not found for pmid 34673343
+[ERROR] Factor Hypertension not found for pmid 34673343
+[ERROR] Factor Cancer not found for pmid 36726149
+[ERROR] Factor Chemotherapy not found for pmid 31948240
+[ERROR] Factor Cancer not found for pmid 31948240
+[ERROR] Factor Cancer not found for pmid 32572092
+[ERROR] Factor Gender not found for pmid 32572092
+[OK] Found factor BMI for pmid 32572092
+[ERROR] Factor Smoking not found for pmid 32572092
+[ERROR] Factor Chemotherapy not found for pmid 26202391
+[ERROR] Factor PICC infection not found for pmid 26202391
+[ERROR] Factor Anticoagulants therapy not found for pmid 26202391
+[ERROR] Factor Chemotherapy not found for pmid 35943390
+[ERROR] Factor PICC infection not found for pmid 35943390
+[ERROR] Factor Age not found for pmid 35763062
+[ERROR] Factor PICC insertion procedure not found for pmid 35763062
+[ERROR] Factor Biology ( blood platelet level_white blood cell level_triglycerides_fibrinogen) not found for pmid 35763062
+[ERROR] Factor ICU not found for pmid 27818170
+[ERROR] Factor Biology ( blood platelet level_white blood cell level_triglycerides_fibrinogen) not found for pmid 27818170
+[ERROR] Factor Chemotherapy not found for pmid 30673943
+[ERROR] Factor Cancer not found for pmid 30673943
+[ERROR] Factor Cancer not found for pmid 36853924
+[ERROR] Factor PICC infection not found for pmid 36853924
+[ERROR] Factor Age not found for pmid 33860712
+[ERROR] Factor PICC indwelling time not found for pmid 33860712
+[ERROR] Factor PICC insertion procedure not found for pmid 26117624
+[OK] Found factor Total parenteral nutrition for pmid 25997503
+[ERROR] Factor ICU not found for pmid 32709498
+[ERROR] Factor PICC infection not found for pmid 32709498
+[ERROR] Factor PICC infection not found for pmid 34459038
+[ERROR] Factor PICC insertion procedure not found for pmid 34343193
+[ERROR] Factor PICC infection not found for pmid 34343193
+[ERROR] Factor Cancer not found for pmid 34226216
+[ERROR] Factor PICC insertion procedure not found for pmid 34226216
+[ERROR] Factor PICC infection not found for pmid 31556001
+[ERROR] Factor Cancer not found for pmid 34729630
+[ERROR] Factor Cancer not found for pmid 33244268
+[ERROR] Factor BMI not found for pmid 33244268
+[ERROR] Factor PICC insertion procedure not found for pmid 33244268
+[OK] Found factor Biology ( blood platelet level_white blood cell level_triglycerides_fibrinogen) for pmid 33244268
+[ERROR] Factor Slower blood flow velocity not found for pmid 33244268
+[ERROR] Factor Cancer not found for pmid 33157980
+[ERROR] Factor Cancer not found for pmid 32880203
+[OK] Found factor Non-O blood type_ group B for pmid 32880203
+[ERROR] Factor ICU not found for pmid 30560363
+[ERROR] Factor Gender not found for pmid 30560363
+[ERROR] Factor PICC infection not found for pmid 30560363
+[ERROR] Factor Cancer not found for pmid 24137199
+[ERROR] Factor PICC insertion procedure not found for pmid 34096375
+[ERROR] Factor Chemotherapy not found for pmid 31764785
+[ERROR] Factor Cancer not found for pmid 31764785
+[ERROR] Factor Gender not found for pmid 31764785
+[ERROR] Factor BMI not found for pmid 31764785
+[ERROR] Factor Smoking not found for pmid 31764785
+[ERROR] Factor Age not found for pmid 31764785
+[ERROR] Factor Number of comorbidities/HTA/Hyperglycemia not found for pmid 31764785
+[OK] Found factor Anticoagulants therapy for pmid 31764785
+[ERROR] Factor Cancer not found for pmid 35287828
+[OK] Found factor BMI for pmid 35287828
+[ERROR] Factor Age not found for pmid 35287828
+[ERROR] Factor Cancer not found for pmid 28218366
+[OK] Found factor BMI for pmid 28218366
+[ERROR] Factor PICC indwelling time not found for pmid 28218366
+[ERROR] Factor PICC infection not found for pmid 28218366
+[ERROR] Factor Diabete not found for pmid 35645580
+[ERROR] Factor PICC insertion procedure not found for pmid 35645580
+[ERROR] Factor PICC infection not found for pmid 35645580
+[ERROR] Factor PICC infection not found for pmid 28978332
+[ERROR] Factor PICC infection not found for pmid 26312402
+[OK] Found factor Chemotherapy for pmid 28936124
+[ERROR] Factor Cancer not found for pmid 28936124
+[OK] Found factor Gender for pmid 28936124
+[OK] Found factor PICC insertion procedure for pmid 28936124
+[OK] Found factor Cancer for pmid 30594171
+[ERROR] Factor Anticoagulants therapy not found for pmid 30594171
+[ERROR] Factor Cancer not found for pmid 31721153
+[ERROR] Factor Chemotherapy not found for pmid 37046808
+[ERROR] Factor Cancer not found for pmid 37046808
+[ERROR] Factor Cancer not found for pmid 31445252
+[ERROR] Factor Chemotherapy not found for pmid 24781722
+[OK] Found factor BMI for pmid 24781722
+[OK] Found factor Age for pmid 24781722
+[OK] Found factor ICU for pmid 30384035
+[ERROR] Factor PICC infection not found for pmid 26113804
+[ERROR] Factor PICC insertion procedure not found for pmid 28740162
+[ERROR] Factor BMI not found for pmid 24911379
+[ERROR] Factor Biology ( blood platelet level_white blood cell level_triglycerides_fibrinogen) not found for pmid 24911379
+[ERROR] Factor PICC infection not found for pmid 24911379
+[ERROR] Factor Biology ( blood platelet level_white blood cell level_triglycerides_fibrinogen) not found for pmid 31981040
+[ERROR] Factor Anticoagulants therapy not found for pmid 31981040
+[OK] Found factor Cancer for pmid 35279504
+[OK] Found factor Diabete for pmid 34095299
+[ERROR] Factor Cancer not found for pmid 34095299
+[OK] Found factor Surgery_type of surgery for pmid 34095299
+[ERROR] Factor Thrombophilia not found for pmid 34095299
+[OK] Found factor Chemotherapy for pmid 25680892
+[OK] Found factor Diabete for pmid 25680892
+[OK] Found factor BMI for pmid 25680892
+[OK] Found factor History Of Thrombosis for pmid 25680892
+[ERROR] Factor Performans score_performance status_karnofsky_ECOG_Less activity_bedridden > 72h not found for pmid 25680892
+[OK] Found factor Thrombophilia for pmid 25680892
+[OK] Found factor PICC insertion procedure for pmid 34454607
+[ERROR] Factor Chemotherapy not found for pmid 37736715
+[ERROR] Factor Cancer not found for pmid 37736715
+[ERROR] Factor PICC insertion procedure not found for pmid 37736715
+[ERROR] Factor PICC infection not found for pmid 37736715
+[ERROR] Factor PICC infection not found for pmid 27240799
+[ERROR] Factor PICC infection not found for pmid 25616129
+[ERROR] Factor PICC infection not found for pmid 25634150
+[ERROR] Factor Chemotherapy not found for pmid 31005243
+[ERROR] Factor Cancer not found for pmid 31005243
+[ERROR] Factor Chemotherapy not found for pmid 38105233
+[ERROR] Factor Cancer not found for pmid 38105233
+[ERROR] Factor Smoking not found for pmid 38105233
+[ERROR] Factor Age not found for pmid 38105233
+[ERROR] Factor Number of comorbidities/HTA/Hyperglycemia not found for pmid 38105233
+[ERROR] Factor Biology ( blood platelet level_white blood cell level_triglycerides_fibrinogen) not found for pmid 38105233
+[ERROR] Factor PICC infection not found for pmid 38105233
+[ERROR] Factor Chemotherapy not found for pmid 36013377
+[ERROR] Factor Cancer not found for pmid 36013377
+[ERROR] Factor Cancer not found for pmid 28619777
+[ERROR] Factor PICC infection not found for pmid 28619777
+[ERROR] Factor Cancer not found for pmid 37883756
+[ERROR] Factor PICC infection not found for pmid 35086961
+[ERROR] Factor ICU not found for pmid 33908337
+[ERROR] Factor PICC infection not found for pmid 33908337
+[ERROR] Factor Cancer not found for pmid 37572590
+[ERROR] Factor Chemotherapy not found for pmid 25198809
+[ERROR] Factor PICC infection not found for pmid 25198809
+[ERROR] Factor Age not found for pmid 25953205
+[ERROR] Factor PICC insertion procedure not found for pmid 25953205
+[ERROR] Factor PICC infection not found for pmid 25953205
+[ERROR] Factor Two or more lumens not found for pmid 34973357
+[ERROR] Factor Diabete not found for pmid 34973357
+[ERROR] Factor BMI not found for pmid 34973357
+[ERROR] Factor PICC infection not found for pmid 34973357
+[ERROR] Factor Surgery_type of surgery not found for pmid 31073442
+[ERROR] Factor PICC infection not found for pmid 31073442
+[ERROR] Factor PICC infection not found for pmid 34297997
+[ERROR] Factor Two or more lumens not found for pmid 36960818
+[ERROR] Factor PICC infection not found for pmid 36960818
+[ERROR] Factor Cancer not found for pmid 34711086
+[ERROR] Factor PICC insertion procedure not found for pmid 34711086
+[ERROR] Factor ICU not found for pmid 26519981
+[ERROR] Factor PICC infection not found for pmid 26519981
+[ERROR] Factor PICC infection not found for pmid 26217634
+[ERROR] Factor Surgery_type of surgery not found for pmid 36644041
+[ERROR] Factor Anticoagulants therapy not found for pmid 36644041
+[ERROR] Factor Slower blood flow velocity not found for pmid 35495896
+[ERROR] Factor Cancer not found for pmid 33594508
+[ERROR] Factor PICC indwelling time not found for pmid 25377903
+[ERROR] Factor PICC infection not found for pmid 25377903
+[OK] Found factor BMI for pmid 24983259
+[OK] Found factor Hypertension for pmid 24983259
+[ERROR] Factor Chemotherapy not found for pmid 33019880
+[ERROR] Factor Performans score_performance status_karnofsky_ECOG_Less activity_bedridden > 72h not found for pmid 33019880
+[ERROR] Factor Biology ( blood platelet level_white blood cell level_triglycerides_fibrinogen) not found for pmid 33019880
+[ERROR] Factor PICC infection not found for pmid 33019880
+[ERROR] Factor Gender not found for pmid 30348912
+[ERROR] Factor Age not found for pmid 30348912
+[ERROR] Factor PICC infection not found for pmid 30348912
+[ERROR] Factor PICC insertion procedure not found for pmid 33084898
+[ERROR] Factor PICC infection not found for pmid 33084898
+[ERROR] Factor Cancer not found for pmid 28634973
+[ERROR] Factor PICC infection not found for pmid 28634973
+[ERROR] Factor Age not found for pmid 28823518
+[ERROR] Factor PICC infection not found for pmid 36676072
+[ERROR] Factor PICC insertion procedure not found for pmid 27371372
+[ERROR] Factor Surgery_type of surgery not found for pmid 22948189
+[ERROR] Factor PICC infection not found for pmid 22948189
+[ERROR] Factor PICC infection not found for pmid 38157768
+[ERROR] Factor Biology ( blood platelet level_white blood cell level_triglycerides_fibrinogen) not found for pmid 34177272
+[ERROR] Factor Hypertension not found for pmid 34177272
+[OK] Found factor ICU for pmid 28822403
+[ERROR] Factor PICC infection not found for pmid 28822403
+[OK] Found factor PICC insertion procedure for pmid 27957644
+[ERROR] Factor Cancer not found for pmid 26369828
+[ERROR] Factor PICC infection not found for pmid 26369828
+[ERROR] Factor Cancer not found for pmid 23633980
+[ERROR] Factor Biology ( blood platelet level_white blood cell level_triglycerides_fibrinogen) not found for pmid 23633980
+[OK] Found factor PICC infection for pmid 23633980
+[OK] Found factor Erythropoiesis-stimulating agents for pmid 23633980
+[ERROR] Factor Cancer not found for pmid 32043739
+[ERROR] Factor Age not found for pmid 32043739
+[ERROR] Factor ICU not found for pmid 23354238
+[ERROR] Factor PICC indwelling time not found for pmid 23354238
+[ERROR] Factor Cancer not found for pmid 30111976
+[ERROR] Factor PICC infection not found for pmid 24811603
+[ERROR] Factor Blood vessel irritating drug_vancomycin_amphotericine not found for pmid 24811603
+[ERROR] Factor PICC infection not found for pmid 31387123
+[ERROR] Factor PICC infection not found for pmid 31565960
+[ERROR] Factor Chemotherapy not found for pmid 31464692
+[ERROR] Factor Cancer not found for pmid 31464692
+[ERROR] Factor PICC insertion procedure not found for pmid 31464692
+[ERROR] Factor PICC infection not found for pmid 31464692
+[OK] Found factor Cancer for pmid 23697825
+[ERROR] Factor Chemotherapy not found for pmid 36299679
+[ERROR] Factor Cancer not found for pmid 36299679
+[ERROR] Factor Gender not found for pmid 24436591
+[ERROR] Factor PICC infection not found for pmid 24436591
+[ERROR] Factor Anticoagulants therapy not found for pmid 35815563
+[ERROR] Factor Diabete not found for pmid 35701467
+[ERROR] Factor BMI not found for pmid 35701467
+[ERROR] Factor Age not found for pmid 35701467
+[ERROR] Factor Age not found for pmid 37349797
+[ERROR] Factor Cancer not found for pmid 29148000
+[ERROR] Factor PICC insertion procedure not found for pmid 29148000
+[ERROR] Factor Two or more lumens not found for pmid 29377971
+[ERROR] Factor PICC infection not found for pmid 29377971
+[ERROR] Factor Chemotherapy not found for pmid 25120012
+[ERROR] Factor Cancer not found for pmid 25120012
+[ERROR] Factor PICC indwelling time not found for pmid 25120012
+[ERROR] Factor Total parenteral nutrition not found for pmid 25120012
+[ERROR] Factor PICC infection not found for pmid 25120012
+[ERROR] Factor Two or more lumens not found for pmid 34842905
+[ERROR] Factor Number of comorbidities/HTA/Hyperglycemia not found for pmid 34842905
+[ERROR] Factor PICC infection not found for pmid 34842905
+[ERROR] Factor Gender not found for pmid 26339941
+[ERROR] Factor Surgery_type of surgery not found for pmid 33173567
+[ERROR] Factor Cancer not found for pmid 37254629
+[ERROR] Factor PICC infection not found for pmid 37254629
+[ERROR] Factor Cancer not found for pmid 32943968
+[ERROR] Factor BMI not found for pmid 32943968
+[ERROR] Factor Gender not found for pmid 37166852
+[ERROR] Factor ICU not found for pmid 25374804
+[ERROR] Factor PICC insertion procedure not found for pmid 25374804
+[ERROR] Factor Performans score_performance status_karnofsky_ECOG_Less activity_bedridden > 72h not found for pmid 25374804
+[ERROR] Factor PICC infection not found for pmid 26623068
+[OK] Found factor Age for pmid 33388763
+[OK] Found factor Others (COPD, IBD) for pmid 33388763
+[ERROR] Factor Diabete not found for pmid 29659465
+[OK] Found factor Number of comorbidities/HTA/Hyperglycemia for pmid 29659465
+[ERROR] Factor PICC indwelling time not found for pmid 30795912
+[ERROR] Factor PICC infection not found for pmid 30795912
+[ERROR] Factor PICC indwelling time not found for pmid 36113076
+[ERROR] Factor PICC infection not found for pmid 36113076
+[ERROR] Factor PICC infection not found for pmid 29293304
+[ERROR] Factor PICC infection not found for pmid 35285085
+[ERROR] Factor PICC infection not found for pmid 34148390
+[OK] Found factor Chemotherapy for pmid 32205131
+[ERROR] Factor Cancer not found for pmid 32205131
+[OK] Found factor Age for pmid 32205131
+[OK] Found factor Hypertension for pmid 32205131
+[ERROR] Factor PICC indwelling time not found for pmid 27792437
+[ERROR] Factor Biology ( blood platelet level_white blood cell level_triglycerides_fibrinogen) not found for pmid 25191821
+[ERROR] Factor Anticoagulants therapy not found for pmid 25191821
+[ERROR] Factor PICC insertion procedure not found for pmid 30513003
+[ERROR] Factor Biology ( blood platelet level_white blood cell level_triglycerides_fibrinogen) not found for pmid 30513003
+[OK] Found factor Chemotherapy for pmid 24090605
+[ERROR] Factor Cancer not found for pmid 24090605
+[ERROR] Factor Biology ( blood platelet level_white blood cell level_triglycerides_fibrinogen) not found for pmid 24090605
+[ERROR] Factor PICC infection not found for pmid 24090605
+[OK] Found factor PICC insertion procedure for pmid 32375605
+[ERROR] Factor PICC infection not found for pmid 32375605
+[ERROR] Factor Cancer not found for pmid 37205327
+[ERROR] Factor Gender not found for pmid 37205327
+[ERROR] Factor Biology ( blood platelet level_white blood cell level_triglycerides_fibrinogen) not found for pmid 37205327
+[OK] Found factor Two or more lumens for pmid 30909723
+[ERROR] Factor PICC insertion procedure not found for pmid 30589718
+[ERROR] Factor PICC infection not found for pmid 30589718
+[ERROR] Factor Cancer not found for pmid 23002096
+[ERROR] Factor Total parenteral nutrition not found for pmid 23002096
+[ERROR] Factor PICC infection not found for pmid 23002096
+[ERROR] Factor PICC infection not found for pmid 25656251
+[ERROR] Factor Power injectable PICC not found for pmid 25198813
+[ERROR] Factor Chemotherapy not found for pmid 25198813
+[ERROR] Factor PICC infection not found for pmid 25198813
+[ERROR] Factor PICC infection not found for pmid 34980518
+[ERROR] Factor PICC indwelling time not found for pmid 33298237
+[ERROR] Factor Total parenteral nutrition not found for pmid 33298237
+[ERROR] Factor PICC infection not found for pmid 33298237
+[OK] Found factor Hospitalisation/ Medical department admission/ discharged to a skilled-nursing facility for pmid 33298237
+[OK] Found factor Chemotherapy for pmid 23710585
+[OK] Found factor Diabete for pmid 23710585
+[ERROR] Factor Cancer not found for pmid 23710585
+[ERROR] Factor Chemotherapy not found for pmid 31674857
+[ERROR] Factor Cancer not found for pmid 31674857
+[ERROR] Factor BMI not found for pmid 31674857
+[ERROR] Factor Cancer not found for pmid 34399039
+[ERROR] Factor Number of comorbidities/HTA/Hyperglycemia not found for pmid 25940453
+[ERROR] Factor Hospitalisation/ Medical department admission/ discharged to a skilled-nursing facility not found for pmid 25940453
+[ERROR] Factor Diabete not found for pmid 27126759
+[ERROR] Factor ICU not found for pmid 32205954
+[ERROR] Factor PICC infection not found for pmid 32205954
+[OK] Found factor Two or more lumens for pmid 32551112
+[ERROR] Factor ICU not found for pmid 32551112
+[OK] Found factor Gender for pmid 32551112
+[MISSING] 22444157 is missing for factor Chemotherapy
+[MISSING] 22444157 is missing for factor Diabete
+[MISSING] 22444157 is missing for factor Cancer
+[MISSING] 21541826 is missing for factor Gender
+[MISSING] 11941543 is missing for factor Age
+[MISSING] 19753569 is missing for factor History Of Thrombosis
+[MISSING] 20923799 is missing for factor History Of Thrombosis
+[MISSING] 11941543 is missing for factor History Of Thrombosis
+[MISSING] 22113818 is missing for factor History Of Thrombosis
+[MISSING] 10928518 is missing for factor Large catheter
+[MISSING] 20923799 is missing for factor Large catheter
+[MISSING] 19753569 is missing for factor PICC insertion procedure
+[MISSING] 22113818 is missing for factor Surgery_type of surgery
+[MISSING] 20923799 is missing for factor Surgery_type of surgery
+[MISSING] 18596317 is missing for factor Anticoagulants therapy
+[MISSING] 22266584 is missing for factor Others (COPD, IBD)
+[MISSING] 22444157 is missing for factor Others (COPD, IBD)
+[MISSING] 22266584 is missing for factor Arm_laterality _vein choice
+[MISSING] 22113818 is missing for factor Arm_laterality _vein choice
+[MISSING] 11941543 is missing for factor Hospitalisation/ Medical department admission/ discharged to a skilled-nursing facility
+[MISSING] 11941543 is missing for factor Blood vessel irritating drug_vancomycin_amphotericine
+[MISSING] 22266584 is missing for factor Blood vessel irritating drug_vancomycin_amphotericine
+[MISSING] 22113818 is missing for factor Blood vessel irritating drug_vancomycin_amphotericine

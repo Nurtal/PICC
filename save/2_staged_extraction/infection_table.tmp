@@ -1,0 +1,168 @@
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>retrospective</th>
+      <th>review</th>
+      <th>prospective</th>
+      <th>meta-analysis</th>
+      <th>undefined</th>
+      <th>rct</th>
+    </tr>
+    <tr>
+      <th>Factor</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Two or more lumens</th>
+      <td>24440542 - 32028425 - 23838218 - 37052429 - 37370862 - 30379146 - 30845210</td>
+      <td></td>
+      <td>30391696</td>
+      <td></td>
+      <td>29118410</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>Medical department admission (including ICU)</th>
+      <td>24440542 - 28822403</td>
+      <td></td>
+      <td>37114756</td>
+      <td></td>
+      <td>31937457</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>Hospital length of stay</th>
+      <td>24440542 - 24911379 - 30845210</td>
+      <td></td>
+      <td>36921694 - 37151085 - 37114756</td>
+      <td></td>
+      <td>36438461</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>Parenteral nutrition</th>
+      <td>34218708 - 37146111 - 25852128</td>
+      <td></td>
+      <td>33298237</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>Advanced Age</th>
+      <td>25953205 - 30845210</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>31937457</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>Previous PICC</th>
+      <td>36597793</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>31937457</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>PICC dwell time</th>
+      <td>34628865 - 29516966 - 28540264 - 32569313 - 26269383</td>
+      <td>27397766</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>Immunosuppression</th>
+      <td>33633889 - 23838218 - 30180989 - 28540264</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>Operator experience</th>
+      <td>29516966</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>Antibiotic therapy</th>
+      <td>32028425 - 31565960</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>Power-injectable piccs</th>
+      <td>23838218</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>Seasonality (summer / warm)</th>
+      <td>28540264</td>
+      <td></td>
+      <td>26045668</td>
+      <td></td>
+      <td>25987475</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>Catheter care delay</th>
+      <td></td>
+      <td></td>
+      <td>26045668</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>Chemotherapy</th>
+      <td>37370862</td>
+      <td></td>
+      <td>27020965</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>Auto/allograft</th>
+      <td>26202391</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>Anticoagulants therapy</th>
+      <td>26202391</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
