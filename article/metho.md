@@ -5,7 +5,7 @@
       - published between 2013 and 2023
       - excluding case report
       - excluding pediatric patients
-      - focued on PICC line and risk factors
+      - focued on PICC line, risk factors and infection or thrombosis
 * A first selection was performed by BIBOT to identify a subset of articles [WORKFLOW FIGURE]
 
 ### Litteratre review - infromation extraction
