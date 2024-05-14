@@ -876,9 +876,11 @@ def craft_table():
                 if pmid_to_status[pmid] == status:
 
                     # mark approved pmid
-                    if pmid in pmid_associated_to_factor_llm_approved:
+                    if(pmid in pmid_associated_to_factor_llm_approved and pmid in pmid_to_factor_verified):
+                        pmid = f"[X][V]{pmid}"
+                    elif pmid in pmid_associated_to_factor_llm_approved:
                         pmid = f"[X]{pmid}"
-                    if pmid in pmid_to_factor_verified:
+                    elif pmid in pmid_to_factor_verified:
                         pmid = f"[V]{pmid}"
 
                     status_line += f"{pmid} - "
