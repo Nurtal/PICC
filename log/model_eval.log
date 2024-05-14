@@ -1,6 +1,7 @@
-[ACC] => 0.9
-[AUC] => 0.9259259259259259
+[ACC] => 0.875
+[AUC] => 0.9074074074074074
 [MISS CLASSIFIED] -> 34218708_INFECTION_Parenteral nutrition => 1 instead of 0 
 [MISS CLASSIFIED] -> 25673995_THROMBOSIS_Cancer => 1 instead of 0 
 [MISS CLASSIFIED] -> 25953205_THROMBOSIS_PICC infection => 1 instead of 0 
 [MISS CLASSIFIED] -> 33383236_THROMBOSIS_Chemotherapy => 1 instead of 0 
+[MISS CLASSIFIED] -> 34794291_THROMBOSIS_Cancer => 1 instead of 0 

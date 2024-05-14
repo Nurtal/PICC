@@ -2,6 +2,10 @@ import pandas as pd
 from pandas.core.reshape.merge import restore_dropped_levels_multijoin
 from sklearn.metrics import accuracy_score
 from sklearn import metrics
+import matplotlib.pyplot as plt
+from sklearn import metrics
+import seaborn as sns
+import numpy as np
 
 
 def run_evaluation(thrombose_file, infection_file, validation_file, result_file):
@@ -84,6 +88,29 @@ def run_evaluation(thrombose_file, infection_file, validation_file, result_file)
     acc = accuracy_score(true, prediction)
     fpr, tpr, thresholds = metrics.roc_curve(true, prediction, pos_label=1)
     auc = metrics.auc(fpr, tpr)
+
+    
+    plt.plot(fpr,tpr,label="LLM, auc="+str(auc))
+    plt.legend(loc=4)
+    plt.savefig('images/roc_curve.png')
+    plt.close()
+
+    
+    # generate confusion matrix
+    cnf_matrix = metrics.confusion_matrix(true, prediction)
+    class_names=[1,0] # name  of classes
+    fig, ax = plt.subplots()
+    tick_marks = np.arange(len(class_names))
+    plt.xticks(tick_marks, class_names)
+    plt.yticks(tick_marks, class_names)
+    sns.heatmap(pd.DataFrame(cnf_matrix), annot=True, cmap="YlGnBu" ,fmt='g')
+    ax.xaxis.set_label_position("top")
+    plt.tight_layout()
+    plt.title('Confusion matrix', y=1.1)
+    plt.ylabel('Actual label')
+    plt.xlabel('Predicted label')
+    plt.savefig('images/confusion_matrix.png')
+    plt.close()
 
     # save result
     result_data = open(result_file, "w")

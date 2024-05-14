@@ -1,6 +1,6 @@
 # PICC
 
 ## TO DO
-- [ ] Generate ROC curves
-- [ ] Generate confusion matrix
+- [x] Generate ROC curves
+- [x] Generate confusion matrix
 - [ ] Write Methodo & results review part
