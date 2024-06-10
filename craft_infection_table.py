@@ -820,6 +820,32 @@ def craft_table():
         "data/check_infection_fdr.csv"
     )
 
+
+    # Display count
+    pmid_only_llm = []
+    pmid_both = []
+    pmid_only_manual = []
+    pmid_neither = []
+    for pmid in pmid_to_factors_llm:
+        if(pmid in pmid_to_factor_verified):
+            pmid_both.append(pmid)
+        else:
+            pmid_only_llm.append(pmid)
+
+    for pmid in pmid_to_factor_verified:
+        if(pmid not in pmid_to_factors_llm):
+            pmid_only_manual.append(pmid)
+
+    for pmid in pmid_to_factors:
+        if pmid not in pmid_to_factors_llm and pmid not in pmid_to_factor_verified:
+            pmid_neither.append(pmid)
+    print("")
+    print(f"[AI+MANUAL] => {len(pmid_both)}")
+    print(f"[AI ONLY] => {len(pmid_only_llm)}")
+    print(f"[MANUAL ONLY] => {len(pmid_only_manual)}")
+    print(f"[NEITHER] => {len(pmid_neither)}")
+    print("-"*45)
+
     # create supp list
     print(f"[LLM] => {len(pmid_to_factors_llm)}")
     print(f"[MANUAL] => {len(pmid_to_factor_verified)}")
