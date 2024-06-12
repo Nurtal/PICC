@@ -28,4 +28,7 @@ def reformat_check_table():
 
 if __name__ == "__main__":
 
-    reformat_check_table()
+    # reformat_check_table()
+
+    df = pd.read_parquet("data/thrombose_article.parquet")
+    print(df)
