@@ -76,6 +76,9 @@ def get_pmid_to_risk_ia(pmid_to_text, pmid_to_risk_m):
     pmid_to_risk_ai = {}
     bar = FillingCirclesBar("[EXTRACTION WITH LLM]", max=len(pmid_to_text))
     for pmid in pmid_to_text:
+
+        pmid = str(pmid)
+        
         text = pmid_to_text[pmid]
         risk_list = pmid_to_risk_m[pmid]
         pmid_to_risk_ai[pmid] = []
@@ -102,6 +105,9 @@ def get_pmid_to_risk_ia(pmid_to_text, pmid_to_risk_m):
             
             # save results
             pmid_to_answer[pmid][risk] = x
+
+        # update progress bar
+        bar.next()
             
     # Save log
     with open('llm_answer.pickle', 'wb') as handle:
