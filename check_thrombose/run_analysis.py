@@ -1,5 +1,6 @@
 import pandas as pd
 from langchain_community.llms import Ollama
+from pandas.core.internals.array_manager import ensure_block_shape
 from progress.bar import FillingCirclesBar
 import pickle
 import re
@@ -71,6 +72,8 @@ def get_pmid_to_risk_ia(pmid_to_text, pmid_to_risk_m):
     # init llm
     llm = Ollama(model="llama3:70b")
 
+    log_data = open('scan.log', 'w')
+
     # loop over data
     pmid_to_answer = {}
     pmid_to_risk_ai = {}
@@ -78,33 +81,40 @@ def get_pmid_to_risk_ia(pmid_to_text, pmid_to_risk_m):
     for pmid in pmid_to_text:
 
         pmid = str(pmid)
-        
-        text = pmid_to_text[pmid]
-        risk_list = pmid_to_risk_m[pmid]
-        pmid_to_risk_ai[pmid] = []
-        pmid_to_answer[pmid] = {}
 
-        for risk in risk_list:
-
-            # craft prompt
-            prompt = f"""
-
-            [INSTRUCTION] : Determine if {risk} is a risk factor for picc-related thrombosis complications using only the following text. Answer only by yes / no
-
-            [SENTENCE] : {text}
-
-            [ANSWER]:
-            """
-
-            # run llama
-            x = llm.invoke(prompt)
-
-            # process answer
-            if re.search('yes', x.lower()):
-                pmid_to_risk_ai[pmid].append(risk) 
+        if pmid in pmid_to_risk_m:
             
-            # save results
-            pmid_to_answer[pmid][risk] = x
+        
+            text = pmid_to_text[pmid]
+            risk_list = pmid_to_risk_m[pmid]
+            pmid_to_risk_ai[pmid] = []
+            pmid_to_answer[pmid] = {}
+
+            for risk in risk_list:
+
+                # craft prompt
+                prompt = f"""
+
+                [INSTRUCTION] : Determine if {risk} is a risk factor for picc-related thrombosis complications using only the following text. Answer only by yes / no
+
+                [SENTENCE] : {text}
+
+                [ANSWER]:
+                """
+
+                # run llama
+                x = llm.invoke(prompt)
+
+                # process answer
+                if re.search('yes', x.lower()):
+                    pmid_to_risk_ai[pmid].append(risk) 
+            
+                # save results
+                pmid_to_answer[pmid][risk] = x
+
+        else:
+            log_data.write(f"{pmid} not found in manually evaluated pmid")
+                        
 
         # update progress bar
         bar.next()
@@ -112,6 +122,9 @@ def get_pmid_to_risk_ia(pmid_to_text, pmid_to_risk_m):
     # Save log
     with open('llm_answer.pickle', 'wb') as handle:
         pickle.dump(pmid_to_risk_ai, handle, protocol=pickle.HIGHEST_PROTOCOL)
+
+    # close logs
+    log_data.close()
 
     # return results
     return pmid_to_risk_ai
